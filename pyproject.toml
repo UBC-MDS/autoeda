@@ -37,6 +37,8 @@ classifiers = [
 keywords = []
 # TODO: add dependencies
 dependencies = [
+    "pandas>=2.3.3",
+    "numpy>=2.4.0",
     "matplotlib>=3.10.0",
     "seaborn>=0.13.2"
 ]
