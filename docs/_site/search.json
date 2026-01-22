@@ -1,0 +1,512 @@
+[
+  {
+    "objectID": "reference/index.html",
+    "href": "reference/index.html",
+    "title": "Function reference",
+    "section": "",
+    "text": "Functions to perform automated exploratory data analysis.\n\n\n\nget_summary_df\nReturns a summary dataframe with the main statistics, datatypes,\n\n\n\n\n\n\nFunctions to inspect data for common issues.\n\n\n\nget_unary\nReturns a list of columns with a single value with a relative\n\n\nget_high_cardinality\nIdentify columns with high cardinality.\n\n\n\n\n\n\nFunction to check amount of missing data in a DataFrame.\n\n\n\ncheck_na_outliers\nDiagnose missing values and outliers in a DataFrame.\n\n\n\n\n\n\nFunctions to create common plots for exploratory data analysis.\n\n\n\nplot_correlation_heatmap\nGenerate a correlation heatmap for numeric features in a dataset.\n\n\nplot_histograms_by_target\nPlot histograms of features grouped by a target variable.",
+    "crumbs": [
+      "Function reference"
+    ]
+  },
+  {
+    "objectID": "reference/index.html#some-functions",
+    "href": "reference/index.html#some-functions",
+    "title": "Function reference",
+    "section": "",
+    "text": "Functions to perform automated exploratory data analysis.\n\n\n\ncheck_na_outlier.check_na_outliers\nDiagnose missing values and outliers in a DataFrame.\n\n\nget_summary_df.get_summary_df\nReturns a summary dataframe with the main statistics, datatypes,\n\n\ninspect.get_unary\nReturns a list of columns with a single value with a relative\n\n\ninspect.get_high_cardinality\nIdentify columns with high cardinality.\n\n\nplot.plot_correlation_heatmap\nGenerate a correlation heatmap for numeric features in a dataset.\n\n\nplot.plot_histograms_by_target\nPlot histograms of features grouped by a target variable.",
+    "crumbs": [
+      "Function reference"
+    ]
+  },
+  {
+    "objectID": "reference/preview.html",
+    "href": "reference/preview.html",
+    "title": "preview",
+    "section": "",
+    "text": "preview(ast, max_depth=999, compact=False, as_string=False)\nPrint a friendly representation of a griffe object (e.g. function, docstring)\n\n\n&gt;&gt;&gt; from quartodoc import get_object\n&gt;&gt;&gt; obj = get_object(\"quartodoc\", \"get_object\")\n&gt;&gt;&gt; preview(obj.docstring.parsed)\n...\n&gt;&gt;&gt; preview(obj)\n...",
+    "crumbs": [
+      "Some functions",
+      "preview"
+    ]
+  },
+  {
+    "objectID": "reference/preview.html#examples",
+    "href": "reference/preview.html#examples",
+    "title": "preview",
+    "section": "",
+    "text": "&gt;&gt;&gt; from quartodoc import get_object\n&gt;&gt;&gt; obj = get_object(\"quartodoc\", \"get_object\")\n&gt;&gt;&gt; preview(obj.docstring.parsed)\n...\n&gt;&gt;&gt; preview(obj)\n...",
+    "crumbs": [
+      "Some functions",
+      "preview"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome to AutoEDA’s Documentation ’",
+    "section": "",
+    "text": ":maxdepth: 2 :hidden: :caption: Contents:\nHome \n\nThis is the landing page of your docs. you can update it as you’d like to. This documentation example uses myst markdown as the primary documentation syntax.\n:::{button-link} https://www.pyopensci.org/python-package-guide/documentation/hosting-tools/myst-markdown-rst-doc-syntax.html :color: primary :class: sd-rounded-pill float-left\nLearn more about myst in our pyOpenSci packaging guide.\n:::\nMyst is a version of markdown that has more formatting flexibility. This is what a sphinx directive looks like using myst markdown formatting:\n:::{toctree}\n:maxdepth: 2\n:caption: Contents:\n:::\nIf you see syntax like the syntax below, you are looking at rst.\n.. toctree::\n   :maxdepth: 2\n   :caption: Contents:\n\n\n\n\nCopyright © 2026 Eli Gonzalez, Gurleen Kaur, Gloria Yi, Mantram Sharma.\nFree software distributed under the MIT License."
+  },
+  {
+    "objectID": "index.html#overview",
+    "href": "index.html#overview",
+    "title": "Welcome to AutoEDA’s Documentation ’",
+    "section": "",
+    "text": ":maxdepth: 2 :hidden: :caption: Contents:\nHome \n\nThis is the landing page of your docs. you can update it as you’d like to. This documentation example uses myst markdown as the primary documentation syntax.\n:::{button-link} https://www.pyopensci.org/python-package-guide/documentation/hosting-tools/myst-markdown-rst-doc-syntax.html :color: primary :class: sd-rounded-pill float-left\nLearn more about myst in our pyOpenSci packaging guide.\n:::\nMyst is a version of markdown that has more formatting flexibility. This is what a sphinx directive looks like using myst markdown formatting:\n:::{toctree}\n:maxdepth: 2\n:caption: Contents:\n:::\nIf you see syntax like the syntax below, you are looking at rst.\n.. toctree::\n   :maxdepth: 2\n   :caption: Contents:"
+  },
+  {
+    "objectID": "index.html#copyright",
+    "href": "index.html#copyright",
+    "title": "Welcome to AutoEDA’s Documentation ’",
+    "section": "",
+    "text": "Copyright © 2026 Eli Gonzalez, Gurleen Kaur, Gloria Yi, Mantram Sharma.\nFree software distributed under the MIT License."
+  },
+  {
+    "objectID": "reference/get_object.html",
+    "href": "reference/get_object.html",
+    "title": "get_object",
+    "section": "",
+    "text": "get_object(\n    path,\n    object_name=None,\n    parser='numpy',\n    load_aliases=True,\n    dynamic=False,\n    loader=None,\n)\nFetch a griffe object.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\npath\nstr\nAn import path to the object. This should have the form path.to.module:object. For example, quartodoc:get_object or quartodoc:MdRenderer.render.\nrequired\n\n\nobject_name\n'str | None'\n(Deprecated). A function name.\nNone\n\n\nparser\nstr\nA docstring parser to use.\n'numpy'\n\n\nload_aliases\n\nFor aliases that were imported from other modules, should we load that module?\nTrue\n\n\ndynamic\n\nWhether to dynamically import object. Useful if docstring is not hard-coded, but was set on object by running python code.\nFalse\n\n\n\n\n\n\npreview: print a user-friendly preview of a griffe object.\n\n\n\n&gt;&gt;&gt; get_function(\"quartodoc\", \"get_function\")\n&lt;Function('get_function', ...\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\nx\ndc.Object\nabc",
+    "crumbs": [
+      "Some functions",
+      "get_object"
+    ]
+  },
+  {
+    "objectID": "reference/get_object.html#parameters",
+    "href": "reference/get_object.html#parameters",
+    "title": "get_object",
+    "section": "",
+    "text": "Name\nType\nDescription\nDefault\n\n\n\n\npath\nstr\nAn import path to the object. This should have the form path.to.module:object. For example, quartodoc:get_object or quartodoc:MdRenderer.render.\nrequired\n\n\nobject_name\n'str | None'\n(Deprecated). A function name.\nNone\n\n\nparser\nstr\nA docstring parser to use.\n'numpy'\n\n\nload_aliases\n\nFor aliases that were imported from other modules, should we load that module?\nTrue\n\n\ndynamic\n\nWhether to dynamically import object. Useful if docstring is not hard-coded, but was set on object by running python code.\nFalse",
+    "crumbs": [
+      "Some functions",
+      "get_object"
+    ]
+  },
+  {
+    "objectID": "reference/get_object.html#see-also",
+    "href": "reference/get_object.html#see-also",
+    "title": "get_object",
+    "section": "",
+    "text": "preview: print a user-friendly preview of a griffe object.",
+    "crumbs": [
+      "Some functions",
+      "get_object"
+    ]
+  },
+  {
+    "objectID": "reference/get_object.html#examples",
+    "href": "reference/get_object.html#examples",
+    "title": "get_object",
+    "section": "",
+    "text": "&gt;&gt;&gt; get_function(\"quartodoc\", \"get_function\")\n&lt;Function('get_function', ...",
+    "crumbs": [
+      "Some functions",
+      "get_object"
+    ]
+  },
+  {
+    "objectID": "reference/get_object.html#returns",
+    "href": "reference/get_object.html#returns",
+    "title": "get_object",
+    "section": "",
+    "text": "Name\nType\nDescription\n\n\n\n\nx\ndc.Object\nabc",
+    "crumbs": [
+      "Some functions",
+      "get_object"
+    ]
+  },
+  {
+    "objectID": "reference/plot.plot_histograms_by_target.html",
+    "href": "reference/plot.plot_histograms_by_target.html",
+    "title": "plot.plot_histograms_by_target",
+    "section": "",
+    "text": "plot.plot_histograms_by_target(\n    df,\n    target,\n    features=None,\n    bins=30,\n    figsize=(12, 8),\n)\nPlot histograms of features grouped by a target variable.\nThis function visualizes the distribution of selected features conditioned on the target variable. This is useful for understanding class separation and feature behavior.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\ndf\npandas.DataFrame\nInput dataframe containing features and target.\nrequired\n\n\ntarget\nstr\nName of the target column.\nrequired\n\n\nfeatures\nlist of str\nList of feature column names to plot. If None, all numeric columns except the target will be used.\nNone\n\n\nbins\nint\nNumber of bins for the histograms.\n30\n\n\nfigsize\ntuple\nSize of the figure.\n(12, 8)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nmatplotlib.figure.Figure\nFigure object containing the histograms.",
+    "crumbs": [
+      "some functions",
+      "plot.plot_histograms_by_target"
+    ]
+  },
+  {
+    "objectID": "reference/plot.plot_histograms_by_target.html#parameters",
+    "href": "reference/plot.plot_histograms_by_target.html#parameters",
+    "title": "plot.plot_histograms_by_target",
+    "section": "",
+    "text": "Name\nType\nDescription\nDefault\n\n\n\n\ndf\npandas.DataFrame\nInput dataframe containing features and target.\nrequired\n\n\ntarget\nstr\nName of the target column.\nrequired\n\n\nfeatures\nlist of str\nList of feature column names to plot. If None, all numeric columns except the target will be used.\nNone\n\n\nbins\nint\nNumber of bins for the histograms.\n30\n\n\nfigsize\ntuple\nSize of the figure.\n(12, 8)",
+    "crumbs": [
+      "some functions",
+      "plot.plot_histograms_by_target"
+    ]
+  },
+  {
+    "objectID": "reference/plot.plot_histograms_by_target.html#returns",
+    "href": "reference/plot.plot_histograms_by_target.html#returns",
+    "title": "plot.plot_histograms_by_target",
+    "section": "",
+    "text": "Name\nType\nDescription\n\n\n\n\n\nmatplotlib.figure.Figure\nFigure object containing the histograms.",
+    "crumbs": [
+      "some functions",
+      "plot.plot_histograms_by_target"
+    ]
+  },
+  {
+    "objectID": "reference/inspect.get_high_cardinality.html",
+    "href": "reference/inspect.get_high_cardinality.html",
+    "title": "inspect.get_high_cardinality",
+    "section": "",
+    "text": "inspect.get_high_cardinality(df, max_unique_ratio=0.5)\nIdentify columns with high cardinality.\nA column is considered high cardinality if the ratio of unique values to the total number of rows exceeds max_unique_ratio.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\ndf\npandas.DataFrame\nInput DataFrame to inspect.\nrequired\n\n\nmax_unique_ratio\nfloat\nMaximum allowed ratio of unique values to total rows. Columns exceeding this threshold are flagged. Default is 0.5.\n0.5\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nlist of str\nList of column names with high cardinality.",
+    "crumbs": [
+      "some functions",
+      "inspect.get_high_cardinality"
+    ]
+  },
+  {
+    "objectID": "reference/inspect.get_high_cardinality.html#parameters",
+    "href": "reference/inspect.get_high_cardinality.html#parameters",
+    "title": "inspect.get_high_cardinality",
+    "section": "",
+    "text": "Name\nType\nDescription\nDefault\n\n\n\n\ndf\npandas.DataFrame\nInput DataFrame to inspect.\nrequired\n\n\nmax_unique_ratio\nfloat\nMaximum allowed ratio of unique values to total rows. Columns exceeding this threshold are flagged. Default is 0.5.\n0.5",
+    "crumbs": [
+      "some functions",
+      "inspect.get_high_cardinality"
+    ]
+  },
+  {
+    "objectID": "reference/inspect.get_high_cardinality.html#returns",
+    "href": "reference/inspect.get_high_cardinality.html#returns",
+    "title": "inspect.get_high_cardinality",
+    "section": "",
+    "text": "Name\nType\nDescription\n\n\n\n\n\nlist of str\nList of column names with high cardinality.",
+    "crumbs": [
+      "some functions",
+      "inspect.get_high_cardinality"
+    ]
+  },
+  {
+    "objectID": "reference/plot.plot_correlation_heatmap.html",
+    "href": "reference/plot.plot_correlation_heatmap.html",
+    "title": "plot.plot_correlation_heatmap",
+    "section": "",
+    "text": "plot.plot_correlation_heatmap(\n    df,\n    target=None,\n    method='pearson',\n    figsize=(10, 8),\n)\nGenerate a correlation heatmap for numeric features in a dataset.\nThis function computes pairwise correlations between numeric columns and visualizes them as a heatmap. Optionally, a target column can be highlighted to show correlations specifically with the target.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\ndf\npandas.DataFrame\nInput dataframe containing numeric and non-numeric features.\nrequired\n\n\ntarget\nstr\nName of the target column. If provided, correlations with the target may be emphasized or displayed separately.\nNone\n\n\nmethod\n(pearson, spearman, kendall)\nCorrelation method to use.\n\"pearson\"\n\n\nfigsize\ntuple\nSize of the heatmap figure.\n(10, 8)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nmatplotlib.axes.Axes\nThe Axes object containing the heatmap visualization.",
+    "crumbs": [
+      "some functions",
+      "plot.plot_correlation_heatmap"
+    ]
+  },
+  {
+    "objectID": "reference/plot.plot_correlation_heatmap.html#parameters",
+    "href": "reference/plot.plot_correlation_heatmap.html#parameters",
+    "title": "plot.plot_correlation_heatmap",
+    "section": "",
+    "text": "Name\nType\nDescription\nDefault\n\n\n\n\ndf\npandas.DataFrame\nInput dataframe containing numeric and non-numeric features.\nrequired\n\n\ntarget\nstr\nName of the target column. If provided, correlations with the target may be emphasized or displayed separately.\nNone\n\n\nmethod\n(pearson, spearman, kendall)\nCorrelation method to use.\n\"pearson\"\n\n\nfigsize\ntuple\nSize of the heatmap figure.\n(10, 8)",
+    "crumbs": [
+      "some functions",
+      "plot.plot_correlation_heatmap"
+    ]
+  },
+  {
+    "objectID": "reference/plot.plot_correlation_heatmap.html#returns",
+    "href": "reference/plot.plot_correlation_heatmap.html#returns",
+    "title": "plot.plot_correlation_heatmap",
+    "section": "",
+    "text": "Name\nType\nDescription\n\n\n\n\n\nmatplotlib.axes.Axes\nThe Axes object containing the heatmap visualization.",
+    "crumbs": [
+      "some functions",
+      "plot.plot_correlation_heatmap"
+    ]
+  },
+  {
+    "objectID": "reference/check_na_outlier.check_na_outliers.html",
+    "href": "reference/check_na_outlier.check_na_outliers.html",
+    "title": "check_na_outlier.check_na_outliers",
+    "section": "",
+    "text": "check_na_outlier.check_na_outliers(\n    df,\n    outlier_method='auto',\n    na_threshold=0.1,\n    outlier_threshold=0.05,\n    return_risk=True,\n    return_suggestions=True,\n)\nDiagnose missing values and outliers in a DataFrame.\nThis function summarizes the amount of missing values and potential outliers for each column in the input dataset. It is intended for exploratory data analysis and provides interpretable diagnostics for future data preprocessing.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\ndf\npandas.DataFrame\nInput dataset for exploratory data analysis.\nrequired\n\n\noutlier_method\n(auto, iqr, zscore, mad)\nMethod used to detect outliers in numeric columns. If “auto”, the most appropriate method is selected, based on the distribution of each column.\n\"auto\"\n\n\nna_threshold\nfloat\nProportion threshold above which missing values are flagged as high risk. Further investigation or imputation may be needed if there are lots of missing values.\n0.1\n\n\noutlier_threshold\nfloat\nProportion threshold above which outliers are flagged as high risk.\n0.05\n\n\nreturn_risk\nbool\nWhether to compute and return qualitative risk levels (e.g., “low”, “medium”, “high”) based on the specified thresholds.\nTrue\n\n\nreturn_suggestions\nbool\nWhether to include suggested actions for handling missing values and outliers (e.g., imputation or transformation).\nTrue\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\npandas.DataFrame\nA summary table with one row per column, including missing value statistics, outlier statistics (for numeric columns), and optional risk levels and suggested actions.",
+    "crumbs": [
+      "some functions",
+      "check_na_outlier.check_na_outliers"
+    ]
+  },
+  {
+    "objectID": "reference/check_na_outlier.check_na_outliers.html#parameters",
+    "href": "reference/check_na_outlier.check_na_outliers.html#parameters",
+    "title": "check_na_outlier.check_na_outliers",
+    "section": "",
+    "text": "Name\nType\nDescription\nDefault\n\n\n\n\ndf\npandas.DataFrame\nInput dataset for exploratory data analysis.\nrequired\n\n\noutlier_method\n(auto, iqr, zscore, mad)\nMethod used to detect outliers in numeric columns. If “auto”, the most appropriate method is selected, based on the distribution of each column.\n\"auto\"\n\n\nna_threshold\nfloat\nProportion threshold above which missing values are flagged as high risk. Further investigation or imputation may be needed if there are lots of missing values.\n0.1\n\n\noutlier_threshold\nfloat\nProportion threshold above which outliers are flagged as high risk.\n0.05\n\n\nreturn_risk\nbool\nWhether to compute and return qualitative risk levels (e.g., “low”, “medium”, “high”) based on the specified thresholds.\nTrue\n\n\nreturn_suggestions\nbool\nWhether to include suggested actions for handling missing values and outliers (e.g., imputation or transformation).\nTrue",
+    "crumbs": [
+      "some functions",
+      "check_na_outlier.check_na_outliers"
+    ]
+  },
+  {
+    "objectID": "reference/check_na_outlier.check_na_outliers.html#returns",
+    "href": "reference/check_na_outlier.check_na_outliers.html#returns",
+    "title": "check_na_outlier.check_na_outliers",
+    "section": "",
+    "text": "Name\nType\nDescription\n\n\n\n\n\npandas.DataFrame\nA summary table with one row per column, including missing value statistics, outlier statistics (for numeric columns), and optional risk levels and suggested actions.",
+    "crumbs": [
+      "some functions",
+      "check_na_outlier.check_na_outliers"
+    ]
+  },
+  {
+    "objectID": "reference/inspect.get_unary.html",
+    "href": "reference/inspect.get_unary.html",
+    "title": "inspect.get_unary",
+    "section": "",
+    "text": "inspect.get_unary(df, target=None, threshold=0.75, dropna=False)\nReturns a list of columns with a single value with a relative frequency percentage over a threshold (75% as default). In case user want only unary columns then threshold should be set to 1.\n\n\ndf: pandas dataframe to analyze. threshold: If the relative frequency of the value with the highest counting is over this threshold then column is selected. Default is 0.75. dropna: If considering or not null values as a value in frequencies. Default is False.\n\n\n\nunary_cols: list of unary columns.",
+    "crumbs": [
+      "some functions",
+      "inspect.get_unary"
+    ]
+  },
+  {
+    "objectID": "reference/inspect.get_unary.html#parameters",
+    "href": "reference/inspect.get_unary.html#parameters",
+    "title": "inspect.get_unary",
+    "section": "",
+    "text": "df: pandas dataframe to analyze. threshold: If the relative frequency of the value with the highest counting is over this threshold then column is selected. Default is 0.75. dropna: If considering or not null values as a value in frequencies. Default is False.",
+    "crumbs": [
+      "some functions",
+      "inspect.get_unary"
+    ]
+  },
+  {
+    "objectID": "reference/inspect.get_unary.html#returns",
+    "href": "reference/inspect.get_unary.html#returns",
+    "title": "inspect.get_unary",
+    "section": "",
+    "text": "unary_cols: list of unary columns.",
+    "crumbs": [
+      "some functions",
+      "inspect.get_unary"
+    ]
+  },
+  {
+    "objectID": "reference/get_summary_df.get_summary_df.html",
+    "href": "reference/get_summary_df.get_summary_df.html",
+    "title": "get_summary_df.get_summary_df",
+    "section": "",
+    "text": "get_summary_df.get_summary_df\nget_summary_df.get_summary_df(df, categorical_columns, numerical_columns)\nReturns a summary dataframe with the main statistics, datatypes, counts/missing values for numerical and categorical columns.\nFor categorical columns, the summary includes: - Data types - Number of non-null values - Count of missing values - Most common value/category\nFor numerical columns, the summary includes: - Data types - Count of non-null values - Count of missing values - Mean - Standard deviation - Minimum value - Maximum value\nParameters: df: Pandas DataFrame. categorical_columns: names of the columns with categorical data. numerical_columns: names of the columns with numerical data.\nReturns: categorical_df: summary dataframe for categorical columns. numerical_df: summary dataframe for numerical columns.",
+    "crumbs": [
+      "some functions",
+      "get_summary_df.get_summary_df"
+    ]
+  },
+  {
+    "objectID": "reference/index.html#summary-statistics",
+    "href": "reference/index.html#summary-statistics",
+    "title": "Function reference",
+    "section": "",
+    "text": "Functions to perform automated exploratory data analysis.\n\n\n\nget_summary_df\nReturns a summary dataframe with the main statistics, datatypes,",
+    "crumbs": [
+      "Function reference"
+    ]
+  },
+  {
+    "objectID": "reference/index.html#data-inspection",
+    "href": "reference/index.html#data-inspection",
+    "title": "Function reference",
+    "section": "",
+    "text": "Functions to inspect data for common issues.\n\n\n\nget_unary\nReturns a list of columns with a single value with a relative\n\n\nget_high_cardinality\nIdentify columns with high cardinality.",
+    "crumbs": [
+      "Function reference"
+    ]
+  },
+  {
+    "objectID": "reference/index.html#data-plotting",
+    "href": "reference/index.html#data-plotting",
+    "title": "Function reference",
+    "section": "",
+    "text": "Functions to create common plots for exploratory data analysis.\n\n\n\nplot_correlation_heatmap\nGenerate a correlation heatmap for numeric features in a dataset.\n\n\nplot_histograms_by_target\nPlot histograms of features grouped by a target variable.",
+    "crumbs": [
+      "Function reference"
+    ]
+  },
+  {
+    "objectID": "reference/plot_histograms_by_target.html",
+    "href": "reference/plot_histograms_by_target.html",
+    "title": "plot_histograms_by_target",
+    "section": "",
+    "text": "plot.plot_histograms_by_target(\n    df,\n    target,\n    features=None,\n    bins=30,\n    figsize=(12, 8),\n)\nPlot histograms of features grouped by a target variable.\nThis function visualizes the distribution of selected features conditioned on the target variable. This is useful for understanding class separation and feature behavior.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\ndf\npandas.DataFrame\nInput dataframe containing features and target.\nrequired\n\n\ntarget\nstr\nName of the target column.\nrequired\n\n\nfeatures\nlist of str\nList of feature column names to plot. If None, all numeric columns except the target will be used.\nNone\n\n\nbins\nint\nNumber of bins for the histograms.\n30\n\n\nfigsize\ntuple\nSize of the figure.\n(12, 8)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nmatplotlib.figure.Figure\nFigure object containing the histograms.",
+    "crumbs": [
+      "Data plotting",
+      "plot_histograms_by_target"
+    ]
+  },
+  {
+    "objectID": "reference/plot_histograms_by_target.html#parameters",
+    "href": "reference/plot_histograms_by_target.html#parameters",
+    "title": "plot_histograms_by_target",
+    "section": "",
+    "text": "Name\nType\nDescription\nDefault\n\n\n\n\ndf\npandas.DataFrame\nInput dataframe containing features and target.\nrequired\n\n\ntarget\nstr\nName of the target column.\nrequired\n\n\nfeatures\nlist of str\nList of feature column names to plot. If None, all numeric columns except the target will be used.\nNone\n\n\nbins\nint\nNumber of bins for the histograms.\n30\n\n\nfigsize\ntuple\nSize of the figure.\n(12, 8)",
+    "crumbs": [
+      "Data plotting",
+      "plot_histograms_by_target"
+    ]
+  },
+  {
+    "objectID": "reference/plot_histograms_by_target.html#returns",
+    "href": "reference/plot_histograms_by_target.html#returns",
+    "title": "plot_histograms_by_target",
+    "section": "",
+    "text": "Name\nType\nDescription\n\n\n\n\n\nmatplotlib.figure.Figure\nFigure object containing the histograms.",
+    "crumbs": [
+      "Data plotting",
+      "plot_histograms_by_target"
+    ]
+  },
+  {
+    "objectID": "reference/get_unary.html",
+    "href": "reference/get_unary.html",
+    "title": "get_unary",
+    "section": "",
+    "text": "inspect.get_unary(df, target=None, threshold=0.75, dropna=False)\nReturns a list of columns with a single value with a relative frequency percentage over a threshold (75% as default). In case user want only unary columns then threshold should be set to 1.\n\n\ndf: pandas dataframe to analyze. threshold: If the relative frequency of the value with the highest counting is over this threshold then column is selected. Default is 0.75. dropna: If considering or not null values as a value in frequencies. Default is False.\n\n\n\nunary_cols: list of unary columns.",
+    "crumbs": [
+      "Data inspection",
+      "get_unary"
+    ]
+  },
+  {
+    "objectID": "reference/get_unary.html#parameters",
+    "href": "reference/get_unary.html#parameters",
+    "title": "get_unary",
+    "section": "",
+    "text": "df: pandas dataframe to analyze. threshold: If the relative frequency of the value with the highest counting is over this threshold then column is selected. Default is 0.75. dropna: If considering or not null values as a value in frequencies. Default is False.",
+    "crumbs": [
+      "Data inspection",
+      "get_unary"
+    ]
+  },
+  {
+    "objectID": "reference/get_unary.html#returns",
+    "href": "reference/get_unary.html#returns",
+    "title": "get_unary",
+    "section": "",
+    "text": "unary_cols: list of unary columns.",
+    "crumbs": [
+      "Data inspection",
+      "get_unary"
+    ]
+  },
+  {
+    "objectID": "reference/get_high_cardinality.html",
+    "href": "reference/get_high_cardinality.html",
+    "title": "get_high_cardinality",
+    "section": "",
+    "text": "inspect.get_high_cardinality(df, max_unique_ratio=0.5)\nIdentify columns with high cardinality.\nA column is considered high cardinality if the ratio of unique values to the total number of rows exceeds max_unique_ratio.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\ndf\npandas.DataFrame\nInput DataFrame to inspect.\nrequired\n\n\nmax_unique_ratio\nfloat\nMaximum allowed ratio of unique values to total rows. Columns exceeding this threshold are flagged. Default is 0.5.\n0.5\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nlist of str\nList of column names with high cardinality.",
+    "crumbs": [
+      "Data inspection",
+      "get_high_cardinality"
+    ]
+  },
+  {
+    "objectID": "reference/get_high_cardinality.html#parameters",
+    "href": "reference/get_high_cardinality.html#parameters",
+    "title": "get_high_cardinality",
+    "section": "",
+    "text": "Name\nType\nDescription\nDefault\n\n\n\n\ndf\npandas.DataFrame\nInput DataFrame to inspect.\nrequired\n\n\nmax_unique_ratio\nfloat\nMaximum allowed ratio of unique values to total rows. Columns exceeding this threshold are flagged. Default is 0.5.\n0.5",
+    "crumbs": [
+      "Data inspection",
+      "get_high_cardinality"
+    ]
+  },
+  {
+    "objectID": "reference/get_high_cardinality.html#returns",
+    "href": "reference/get_high_cardinality.html#returns",
+    "title": "get_high_cardinality",
+    "section": "",
+    "text": "Name\nType\nDescription\n\n\n\n\n\nlist of str\nList of column names with high cardinality.",
+    "crumbs": [
+      "Data inspection",
+      "get_high_cardinality"
+    ]
+  },
+  {
+    "objectID": "reference/plot_correlation_heatmap.html",
+    "href": "reference/plot_correlation_heatmap.html",
+    "title": "plot_correlation_heatmap",
+    "section": "",
+    "text": "plot.plot_correlation_heatmap(\n    df,\n    target=None,\n    method='pearson',\n    figsize=(10, 8),\n)\nGenerate a correlation heatmap for numeric features in a dataset.\nThis function computes pairwise correlations between numeric columns and visualizes them as a heatmap. Optionally, a target column can be highlighted to show correlations specifically with the target.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\ndf\npandas.DataFrame\nInput dataframe containing numeric and non-numeric features.\nrequired\n\n\ntarget\nstr\nName of the target column. If provided, correlations with the target may be emphasized or displayed separately.\nNone\n\n\nmethod\n(pearson, spearman, kendall)\nCorrelation method to use.\n\"pearson\"\n\n\nfigsize\ntuple\nSize of the heatmap figure.\n(10, 8)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nmatplotlib.axes.Axes\nThe Axes object containing the heatmap visualization.",
+    "crumbs": [
+      "Data plotting",
+      "plot_correlation_heatmap"
+    ]
+  },
+  {
+    "objectID": "reference/plot_correlation_heatmap.html#parameters",
+    "href": "reference/plot_correlation_heatmap.html#parameters",
+    "title": "plot_correlation_heatmap",
+    "section": "",
+    "text": "Name\nType\nDescription\nDefault\n\n\n\n\ndf\npandas.DataFrame\nInput dataframe containing numeric and non-numeric features.\nrequired\n\n\ntarget\nstr\nName of the target column. If provided, correlations with the target may be emphasized or displayed separately.\nNone\n\n\nmethod\n(pearson, spearman, kendall)\nCorrelation method to use.\n\"pearson\"\n\n\nfigsize\ntuple\nSize of the heatmap figure.\n(10, 8)",
+    "crumbs": [
+      "Data plotting",
+      "plot_correlation_heatmap"
+    ]
+  },
+  {
+    "objectID": "reference/plot_correlation_heatmap.html#returns",
+    "href": "reference/plot_correlation_heatmap.html#returns",
+    "title": "plot_correlation_heatmap",
+    "section": "",
+    "text": "Name\nType\nDescription\n\n\n\n\n\nmatplotlib.axes.Axes\nThe Axes object containing the heatmap visualization.",
+    "crumbs": [
+      "Data plotting",
+      "plot_correlation_heatmap"
+    ]
+  },
+  {
+    "objectID": "reference/check_na_outliers.html",
+    "href": "reference/check_na_outliers.html",
+    "title": "check_na_outliers",
+    "section": "",
+    "text": "check_na_outlier.check_na_outliers(\n    df,\n    outlier_method='auto',\n    na_threshold=0.1,\n    outlier_threshold=0.05,\n    return_risk=True,\n    return_suggestions=True,\n)\nDiagnose missing values and outliers in a DataFrame.\nThis function summarizes the amount of missing values and potential outliers for each column in the input dataset. It is intended for exploratory data analysis and provides interpretable diagnostics for future data preprocessing.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\ndf\npandas.DataFrame\nInput dataset for exploratory data analysis.\nrequired\n\n\noutlier_method\n(auto, iqr, zscore, mad)\nMethod used to detect outliers in numeric columns. If “auto”, the most appropriate method is selected, based on the distribution of each column.\n\"auto\"\n\n\nna_threshold\nfloat\nProportion threshold above which missing values are flagged as high risk. Further investigation or imputation may be needed if there are lots of missing values.\n0.1\n\n\noutlier_threshold\nfloat\nProportion threshold above which outliers are flagged as high risk.\n0.05\n\n\nreturn_risk\nbool\nWhether to compute and return qualitative risk levels (e.g., “low”, “medium”, “high”) based on the specified thresholds.\nTrue\n\n\nreturn_suggestions\nbool\nWhether to include suggested actions for handling missing values and outliers (e.g., imputation or transformation).\nTrue\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\npandas.DataFrame\nA summary table with one row per column, including missing value statistics, outlier statistics (for numeric columns), and optional risk levels and suggested actions.",
+    "crumbs": [
+      "Data inspection",
+      "check_na_outliers"
+    ]
+  },
+  {
+    "objectID": "reference/check_na_outliers.html#parameters",
+    "href": "reference/check_na_outliers.html#parameters",
+    "title": "check_na_outliers",
+    "section": "",
+    "text": "Name\nType\nDescription\nDefault\n\n\n\n\ndf\npandas.DataFrame\nInput dataset for exploratory data analysis.\nrequired\n\n\noutlier_method\n(auto, iqr, zscore, mad)\nMethod used to detect outliers in numeric columns. If “auto”, the most appropriate method is selected, based on the distribution of each column.\n\"auto\"\n\n\nna_threshold\nfloat\nProportion threshold above which missing values are flagged as high risk. Further investigation or imputation may be needed if there are lots of missing values.\n0.1\n\n\noutlier_threshold\nfloat\nProportion threshold above which outliers are flagged as high risk.\n0.05\n\n\nreturn_risk\nbool\nWhether to compute and return qualitative risk levels (e.g., “low”, “medium”, “high”) based on the specified thresholds.\nTrue\n\n\nreturn_suggestions\nbool\nWhether to include suggested actions for handling missing values and outliers (e.g., imputation or transformation).\nTrue",
+    "crumbs": [
+      "Data inspection",
+      "check_na_outliers"
+    ]
+  },
+  {
+    "objectID": "reference/check_na_outliers.html#returns",
+    "href": "reference/check_na_outliers.html#returns",
+    "title": "check_na_outliers",
+    "section": "",
+    "text": "Name\nType\nDescription\n\n\n\n\n\npandas.DataFrame\nA summary table with one row per column, including missing value statistics, outlier statistics (for numeric columns), and optional risk levels and suggested actions.",
+    "crumbs": [
+      "Data inspection",
+      "check_na_outliers"
+    ]
+  },
+  {
+    "objectID": "reference/get_summary_df.html",
+    "href": "reference/get_summary_df.html",
+    "title": "get_summary_df",
+    "section": "",
+    "text": "get_summary_df\nget_summary_df.get_summary_df(df, categorical_columns, numerical_columns)\nReturns a summary dataframe with the main statistics, datatypes, counts/missing values for numerical and categorical columns.\nFor categorical columns, the summary includes: - Data types - Number of non-null values - Count of missing values - Most common value/category\nFor numerical columns, the summary includes: - Data types - Count of non-null values - Count of missing values - Mean - Standard deviation - Minimum value - Maximum value\nParameters: df: Pandas DataFrame. categorical_columns: names of the columns with categorical data. numerical_columns: names of the columns with numerical data.\nReturns: categorical_df: summary dataframe for categorical columns. numerical_df: summary dataframe for numerical columns.",
+    "crumbs": [
+      "Summary statistics",
+      "get_summary_df"
+    ]
+  },
+  {
+    "objectID": "reference/index.html#missing-data-and-outliers",
+    "href": "reference/index.html#missing-data-and-outliers",
+    "title": "Function reference",
+    "section": "",
+    "text": "Function to check amount of missing data in a DataFrame.\n\n\n\ncheck_na_outliers\nDiagnose missing values and outliers in a DataFrame.",
+    "crumbs": [
+      "Function reference"
+    ]
+  }
+]

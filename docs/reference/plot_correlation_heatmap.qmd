@@ -1,0 +1,31 @@
+# plot_correlation_heatmap { #autoeda.plot.plot_correlation_heatmap }
+
+```python
+plot.plot_correlation_heatmap(
+    df,
+    target=None,
+    method='pearson',
+    figsize=(10, 8),
+)
+```
+
+Generate a correlation heatmap for numeric features in a dataset.
+
+This function computes pairwise correlations between numeric columns
+and visualizes them as a heatmap. Optionally, a target column can be
+highlighted to show correlations specifically with the target.
+
+## Parameters {.doc-section .doc-section-parameters}
+
+| Name    | Type                         | Description                                                                                                     | Default     |
+|---------|------------------------------|-----------------------------------------------------------------------------------------------------------------|-------------|
+| df      | pandas.DataFrame             | Input dataframe containing numeric and non-numeric features.                                                    | _required_  |
+| target  | str                          | Name of the target column. If provided, correlations with the target may be emphasized or displayed separately. | `None`      |
+| method  | (pearson, spearman, kendall) | Correlation method to use.                                                                                      | `"pearson"` |
+| figsize | tuple                        | Size of the heatmap figure.                                                                                     | `(10, 8)`   |
+
+## Returns {.doc-section .doc-section-returns}
+
+| Name   | Type                 | Description                                           |
+|--------|----------------------|-------------------------------------------------------|
+|        | matplotlib.axes.Axes | The Axes object containing the heatmap visualization. |

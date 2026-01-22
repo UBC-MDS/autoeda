@@ -1,0 +1,36 @@
+# check_na_outlier.check_na_outliers { #autoeda.check_na_outlier.check_na_outliers }
+
+```python
+check_na_outlier.check_na_outliers(
+    df,
+    outlier_method='auto',
+    na_threshold=0.1,
+    outlier_threshold=0.05,
+    return_risk=True,
+    return_suggestions=True,
+)
+```
+
+Diagnose missing values and outliers in a DataFrame.
+
+This function summarizes the amount of missing values
+and potential outliers for each column in the input dataset.
+It is intended for exploratory data analysis and provides
+interpretable diagnostics for future data preprocessing.
+
+## Parameters {.doc-section .doc-section-parameters}
+
+| Name               | Type                     | Description                                                                                                                                                      | Default    |
+|--------------------|--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------|
+| df                 | pandas.DataFrame         | Input dataset for exploratory data analysis.                                                                                                                     | _required_ |
+| outlier_method     | (auto, iqr, zscore, mad) | Method used to detect outliers in numeric columns. If "auto", the most appropriate method is selected, based on the distribution of each column.                 | `"auto"`   |
+| na_threshold       | float                    | Proportion threshold above which missing values are flagged as high risk. Further investigation or imputation may be needed if there are lots of missing values. | `0.1`      |
+| outlier_threshold  | float                    | Proportion threshold above which outliers are flagged as high risk.                                                                                              | `0.05`     |
+| return_risk        | bool                     | Whether to compute and return qualitative risk levels (e.g., "low", "medium", "high") based on the specified thresholds.                                         | `True`     |
+| return_suggestions | bool                     | Whether to include suggested actions for handling missing values and outliers (e.g., imputation or transformation).                                              | `True`     |
+
+## Returns {.doc-section .doc-section-returns}
+
+| Name   | Type             | Description                                                                                                                                                            |
+|--------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|        | pandas.DataFrame | A summary table with one row per column, including missing value statistics, outlier statistics (for numeric columns), and optional risk levels and suggested actions. |
