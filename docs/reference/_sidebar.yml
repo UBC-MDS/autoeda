@@ -1,0 +1,20 @@
+website:
+  sidebar:
+  - contents:
+    - reference/index.qmd
+    - contents:
+      - reference/get_summary_df.qmd
+      section: Summary statistics
+    - contents:
+      - reference/get_unary.qmd
+      - reference/get_high_cardinality.qmd
+      section: Data inspection
+    - contents:
+      - reference/check_na_outliers.qmd
+      section: Missing data and outliers
+    - contents:
+      - reference/plot_correlation_heatmap.qmd
+      - reference/plot_histograms_by_target.qmd
+      section: Data plotting
+    id: reference
+  - id: dummy-sidebar

@@ -1,0 +1,51 @@
+project:
+  type: website
+
+# tell quarto to read the generated sidebar
+metadata-files:
+  - reference/_sidebar.yml
+
+# tell quarto to read the generated styles
+format:
+  html:
+    css:
+      - reference/_styles-quartodoc.css
+
+quartodoc:
+  # the name used to import the package you want to create reference docs for
+  package: autoeda
+  # write sidebar and style data
+  sidebar: reference/_sidebar.yml
+  css: reference/_styles-quartodoc.css
+
+  sections:
+    - title: Summary statistics
+      desc: Functions to perform automated exploratory data analysis.
+      package: autoeda.get_summary_df
+        # list of functions/classes/modules to document.
+      contents:
+        # the functions being documented in the package.
+        # you can refer to anything: class methods, modules, etc..
+        - get_summary_df
+      
+    - title: Data inspection
+      desc: Functions to inspect data for common issues.
+      package: autoeda.inspect 
+      contents:
+        # the functions being documented in the package.
+        # you can refer to anything: class methods, modules, etc..
+        - get_unary
+        - get_high_cardinality
+    
+    - title: Missing data and outliers
+      desc: Function to check amount of missing data in a DataFrame.
+      package: autoeda.check_na_outlier
+      contents:
+        - check_na_outliers
+
+    - title: Data plotting
+      desc: Functions to create common plots for exploratory data analysis.
+      package: autoeda.plot
+      contents:
+        - plot_correlation_heatmap
+        - plot_histograms_by_target
