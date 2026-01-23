@@ -7,7 +7,6 @@ errors for the incorrectly defined arguments.
 """
 
 import pandas as pd
-import numpy as np
 import pytest
 
 from src.autoeda.get_summary_df import get_summary_df
