@@ -6,10 +6,9 @@ works correctly on the proper data, and also returns
 errors for the incorrectly defined arguments.
 """
 
+from autoeda.get_summary_df import get_summary_df
 import pandas as pd
 import pytest
-
-from src.autoeda.get_summary_df import get_summary_df
 
 df = pd.DataFrame({
         'name': ['John', 'Jeffery', 'Alice', 'Sam', 'Millie'],
