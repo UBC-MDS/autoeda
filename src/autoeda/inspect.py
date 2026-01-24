@@ -12,7 +12,7 @@ def get_unary(df, target=None, threshold=0.75, dropna=False):
     In case user want only unary columns then threshold should be set to 1.
 
     Parameters:
-    ----------
+    -----------
     df: pandas dataframe to analyze.
     threshold: If the relative frequency of the value with the highest counting
     is over this threshold then column is selected. Default is 0.75.
