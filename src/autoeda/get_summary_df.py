@@ -41,7 +41,7 @@ def get_summary_df(df, categorical_columns, numerical_columns):
         raise ValueError("No columns provided to attain a summary")
 
     for column in categorical_columns:
-        if df.loc[:, column].dtype != "object":
+        if df.loc[:, column].dtype not in ["object", "string"]:
             raise ValueError(f"This is not a categorical column: {column}")
         else:
             categorical_df[column] = pd.DataFrame(
