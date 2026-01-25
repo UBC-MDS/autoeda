@@ -6,8 +6,8 @@ import sys
 import importlib.metadata
 from datetime import datetime
 
-sys.path.insert(0, os.path.abspath("../src"))
-autoapi_dirs = ["../src"]
+sys.path.insert(0, os.path.abspath("../autoeda"))
+autoapi_dirs = ["../autoeda"]
 
 # Ensure src/ is on the path so autodoc can find the package
 
