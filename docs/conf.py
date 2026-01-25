@@ -7,11 +7,27 @@ import importlib.metadata
 from datetime import datetime
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
-SRC = ROOT / "src"
+CONF_DIR = Path(__file__).resolve().parent
+
+# Search upwards until we find the repo root (where pyproject.toml exists)
+ROOT = CONF_DIR
+while ROOT != ROOT.parent:
+    if (ROOT / "pyproject.toml").exists():
+        break
+    ROOT = ROOT.parent
+
+SRC_DIR = ROOT / "src"
+
+if not SRC_DIR.exists():
+    raise FileNotFoundError(
+        f"AutoAPI could not find the `src` directory at: {SRC_DIR}\n"
+        "Make sure your repository has `src/autoeda` and that `docs/conf.py` is in the right location."
+    )
+
+sys.path.insert(0, str(SRC_DIR))
+autoapi_dirs = [str(SRC_DIR)]
 
 # Ensure src/ is on the path so autodoc can find the package
-sys.path.insert(0, str(SRC))
 
 # Get the year so it automatically updates
 current_year = datetime.now().year
@@ -22,7 +38,6 @@ project = "AutoEDA"
 copyright = "Copyright © 2026 Eli Gonzalez, Gurleen Kaur, Gloria Yi, Mantram Sharma"
 html_show_sphinx = False
 autoapi_type = "python"
-autoapi_dirs = [str(SRC)]
 autoapi_add_toctree = False
 autoapi_keep_files = False
 autoapi_generate_api_docs = True
@@ -43,13 +58,13 @@ except importlib.metadata.PackageNotFoundError:
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
 extensions = [
-    'sphinx.ext.autodoc',
-    'sphinx.ext.autosummary',
+    "sphinx.ext.autodoc",
+    "sphinx.ext.autosummary",
     "myst_parser",
     "sphinx_design",
     "sphinx_copybutton",
     "sphinx.ext.intersphinx",
-    "sphinx.ext.napoleon", # Support numpy style docstrings
+    "sphinx.ext.napoleon",  # Support numpy style docstrings
     # This allows you to create :::{todo} sections that will not be rendered
     # in the live docs if you want to leave notes for future work in the docs
     "sphinx.ext.todo",
@@ -90,7 +105,7 @@ myst_footnote_transition = False
 templates_path = ["_templates"]
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 
-#--------- setup autoapi defaults for your api docs ---------------
+# --------- setup autoapi defaults for your api docs ---------------
 
 # AutoAPI configuration
 autoapi_type = "python"
@@ -149,5 +164,5 @@ htmlhelp_basename = "AutoEDA_doc"
 
 
 intersphinx_mapping = {
-    "python": ("https://docs.python.org/", None),
+    "python": ("https://docs.python.org/3", "https://docs.python.org/3/objects.inv"),
 }
