@@ -5,10 +5,15 @@ import importlib.metadata
 
 CONF_DIR = os.path.dirname(os.path.abspath(__file__))
 REPO_ROOT = os.path.abspath(os.path.join(CONF_DIR, ".."))
-PACKAGE_DIR = os.path.join(REPO_ROOT, "autoeda")
+
+PACKAGE_DIR = os.path.join(REPO_ROOT, "src", "autoeda")
+
+# sanity check
+if not os.path.isdir(PACKAGE_DIR):
+    raise FileNotFoundError(f"AutoAPI directory not found: {PACKAGE_DIR}")
+
 sys.path.insert(0, PACKAGE_DIR)
 
-# AutoAPI config (only once!)
 autoapi_type = "python"
 autoapi_dirs = [PACKAGE_DIR]
 autoapi_add_toctree = False
