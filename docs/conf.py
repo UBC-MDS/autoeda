@@ -20,6 +20,8 @@ autoapi_add_toctree = False
 autoapi_keep_files = False
 autoapi_generate_api_docs = True
 autoapi_options = ["members", "undoc-members", "show-inheritance"]
+nitpicky = False
+suppress_warnings = ["ref.citation", "toc.not_readable", "myst.xref_missing"]
 
 # Project info
 project = "AutoEDA"

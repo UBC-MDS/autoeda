@@ -27,6 +27,9 @@ jobs:
 
       - name: Run unit tests
         run: pytest tests/unit/
+      
+      - name: Install hatch
+        run: pip install hatch
 
       - name: Build documentation (PR only)
         if: github.event_name == 'pull_request'
