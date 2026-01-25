@@ -5,27 +5,9 @@ import os
 import sys
 import importlib.metadata
 from datetime import datetime
-from pathlib import Path
 
-CONF_DIR = Path(__file__).resolve().parent
-
-# Search upwards until we find the repo root (where pyproject.toml exists)
-ROOT = CONF_DIR
-while ROOT != ROOT.parent:
-    if (ROOT / "pyproject.toml").exists():
-        break
-    ROOT = ROOT.parent
-
-SRC_DIR = ROOT / "src"
-
-if not SRC_DIR.exists():
-    raise FileNotFoundError(
-        f"AutoAPI could not find the `src` directory at: {SRC_DIR}\n"
-        "Make sure your repository has `src/autoeda` and that `docs/conf.py` is in the right location."
-    )
-
-sys.path.insert(0, str(SRC_DIR))
-autoapi_dirs = [str(SRC_DIR)]
+sys.path.insert(0, os.path.abspath("../src"))
+autoapi_dirs = ["../src"]
 
 # Ensure src/ is on the path so autodoc can find the package
 
@@ -71,6 +53,12 @@ extensions = [
     # Auto generate docs
     "autoapi.extension",
 ]
+autodoc_mock_imports = [
+    "matplotlib",
+    "seaborn",
+    "sklearn",
+]
+
 autosummary_generate = True
 # Support Markdown source files & rst for api docs
 source_suffix = [".rst", ".md"]
