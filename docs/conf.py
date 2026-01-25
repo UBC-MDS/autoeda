@@ -97,8 +97,6 @@ exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 
 # AutoAPI configuration
 autoapi_type = "python"
-# point AutoAPI at your package sources; adjust if using src layout
-autoapi_dirs = ["../../src"]
 # Don't let AutoAPI automatically insert a toctree (avoid duplicates)
 autoapi_add_toctree = False
 autoapi_keep_files = False
