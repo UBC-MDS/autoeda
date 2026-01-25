@@ -8,7 +8,7 @@
 *TODO: the above badges that indicate python version and package version will only work if your package is on PyPI.
 If you don't plan to publish to PyPI, you can remove them.*
 
-Overview
+## Overview
 
 AutoEDA is a lightweight Python package designed to automate the most common and time-consuming steps of Exploratory Data Analysis (EDA). Given a pandas DataFrame, AutoEDA quickly surfaces data quality issues, statistical summaries, and meaningful visualizations to help data scientists and analysts understand their data before modeling.
 
@@ -73,6 +73,27 @@ AutoEDA sits in the space between low-level EDA utilities and fully automated pr
 - Interpretable diagnostics and suggestions
 - Tight integration with pandas and matplotlib/seaborn
 - A focus on EDA as code, suitable for notebooks, scripts, and production pipelines
+
+## Development Setup
+
+Create the environment.
+
+```bash
+conda env create -f environment.yml
+conda activate autoeda-dev
+```
+
+Install the package in editable mode.
+
+```bash
+pip install -e .
+```
+
+Run tests
+
+```bash
+pytest
+```
 
 ## Contributors
 
