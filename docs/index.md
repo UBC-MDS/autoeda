@@ -11,7 +11,7 @@ AutoEDA is a lightweight Python package designed to accelerate exploratory data 
 
 ## 📌 Quick Links
 
-- [API Reference](reference/index.html)
+- [API Reference](reference/index.md)
 - [Installation & Setup](#installation)
 - [Usage Examples](#usage-example)
 - [Copyright](#copyright)

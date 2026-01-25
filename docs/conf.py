@@ -21,7 +21,13 @@ autoapi_keep_files = False
 autoapi_generate_api_docs = True
 autoapi_options = ["members", "undoc-members", "show-inheritance"]
 nitpicky = False
-suppress_warnings = ["ref.citation", "toc.not_readable", "myst.xref_missing"]
+suppress_warnings = [
+    "ref.citation",
+    "toc.not_readable",
+    "myst.xref_missing",
+    "toc.not_included",
+    "myst.iref_ambiguous",
+]
 
 # Project info
 project = "AutoEDA"
