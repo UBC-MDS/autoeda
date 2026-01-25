@@ -5,9 +5,13 @@ import os
 import sys
 import importlib.metadata
 from datetime import datetime
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+SRC = ROOT / "src"
 
 # Ensure src/ is on the path so autodoc can find the package
-sys.path.insert(0, os.path.abspath("../../src"))
+sys.path.insert(0, str(SRC))
 
 # Get the year so it automatically updates
 current_year = datetime.now().year
@@ -18,7 +22,7 @@ project = "AutoEDA"
 copyright = "Copyright © 2026 Eli Gonzalez, Gurleen Kaur, Gloria Yi, Mantram Sharma"
 html_show_sphinx = False
 autoapi_type = "python"
-autoapi_dirs = ["../../src"]
+autoapi_dirs = [str(SRC)]
 autoapi_add_toctree = False
 autoapi_keep_files = False
 autoapi_generate_api_docs = True
