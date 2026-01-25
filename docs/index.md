@@ -1,48 +1,40 @@
-# Welcome to AutoEDA's Documentation '
+---
+title: AutoEDA Documentation
+description: Automated EDA tools for fast and clear data exploration.
+---
 
-## Overview
+## Welcome to AutoEDA
 
-:::{toctree}
-:maxdepth: 2
-:hidden:
-:caption: Contents:
+AutoEDA is a lightweight Python package designed to accelerate exploratory data analysis (EDA) by generating summary statistics, detecting common data issues, and creating useful visualizations.
 
-Home <self>
-:::
+---
 
-This is the landing page of your docs. you can update it as you'd like to.
-This documentation example uses myst markdown as the primary documentation syntax.
+### 📌 Quick Links
 
+- [API Reference](reference/index.html)
+- [Installation & Setup](#installation)
+- [Usage Examples](#usage-example)
+- [Copyright](#copyright)
 
-:::{button-link} <https://www.pyopensci.org/python-package-guide/documentation/hosting-tools/myst-markdown-rst-doc-syntax.html>
-:color: primary
-:class: sd-rounded-pill float-left
+---
 
-Learn more about myst in our pyOpenSci packaging guide.
+### Installation
 
-:::
-
-Myst is a version of markdown that has more formatting flexibility.
-This is what a sphinx directive looks like using myst markdown formatting:
-
-```markdown
-:::{toctree}
-:maxdepth: 2
-:caption: Contents:
-:::
-
+```bash
+pip install -e .
 ```
 
-If you see syntax like the syntax below, you are looking at rst.
+### Usage Example
 
-```rst
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+```python
+from autoeda import get_summary_df
+
+summary = get_summary_df(df, target="outcome")
+print(summary.head())
 ```
 
-## Copyright
+### Copyright
 
-- Copyright © 2026 Eli Gonzalez, Gurleen Kaur, Gloria Yi, Mantram Sharma.
-- Free software distributed under the MIT License.
+Copyright © 2026 Eli Gonzalez, Gurleen Kaur, Gloria Yi, Mantram Sharma.
 
+Free software distributed under the MIT License.

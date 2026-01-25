@@ -7,7 +7,7 @@ import importlib.metadata
 from datetime import datetime
 
 # Ensure src/ is on the path so autodoc can find the package
-sys.path.insert(0, os.path.abspath("../src"))
+sys.path.insert(0, os.path.abspath("../../src"))
 
 # Get the year so it automatically updates
 current_year = datetime.now().year
@@ -17,6 +17,12 @@ current_year = datetime.now().year
 project = "AutoEDA"
 copyright = "Copyright © 2026 Eli Gonzalez, Gurleen Kaur, Gloria Yi, Mantram Sharma"
 html_show_sphinx = False
+autoapi_type = "python"
+autoapi_dirs = ["../../src"]
+autoapi_add_toctree = False
+autoapi_keep_files = False
+autoapi_generate_api_docs = True
+autoapi_options = ["members", "undoc-members", "show-inheritance"]
 
 # Try to get the version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -33,6 +39,8 @@ except importlib.metadata.PackageNotFoundError:
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
 extensions = [
+    'sphinx.ext.autodoc',
+    'sphinx.ext.autosummary',
     "myst_parser",
     "sphinx_design",
     "sphinx_copybutton",
@@ -44,7 +52,7 @@ extensions = [
     # Auto generate docs
     "autoapi.extension",
 ]
-
+autosummary_generate = True
 # Support Markdown source files & rst for api docs
 source_suffix = [".rst", ".md"]
 
@@ -83,7 +91,7 @@ exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 # AutoAPI configuration
 autoapi_type = "python"
 # point AutoAPI at your package sources; adjust if using src layout
-autoapi_dirs = ["../src"]
+autoapi_dirs = ["../../src"]
 # Don't let AutoAPI automatically insert a toctree (avoid duplicates)
 autoapi_add_toctree = False
 autoapi_keep_files = False
