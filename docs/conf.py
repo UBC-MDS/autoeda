@@ -2,11 +2,15 @@ import os
 import sys
 import importlib.metadata
 
-sys.path.insert(0, os.path.abspath("../autoeda"))
+
+CONF_DIR = os.path.dirname(os.path.abspath(__file__))
+REPO_ROOT = os.path.abspath(os.path.join(CONF_DIR, ".."))
+PACKAGE_DIR = os.path.join(REPO_ROOT, "autoeda")
+sys.path.insert(0, PACKAGE_DIR)
 
 # AutoAPI config (only once!)
 autoapi_type = "python"
-autoapi_dirs = ["../autoeda"]
+autoapi_dirs = [PACKAGE_DIR]
 autoapi_add_toctree = False
 autoapi_keep_files = False
 autoapi_generate_api_docs = True
