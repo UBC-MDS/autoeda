@@ -16,7 +16,7 @@ summarize variables, and generate quick diagnostics for tabular data.
 
 Install the package using pip:
 
-```{bash}
+```bash
 pip install autoeda
 ```
 
@@ -25,7 +25,7 @@ pip install autoeda
 Here is a minimal example showing how to use autoeda on a pandas
 DataFrame:
 
-```{python}
+```python
 import pandas as pd
 from autoeda.inspect import inspect_df
 
@@ -42,12 +42,14 @@ inspect_df(df)
 
 autoeda currently provides the following functionality:
 
--   Dataset inspection utilities
--   Summary statistics for numerical and categorical variables
--   Quick diagnostics for tabular datasets
+- Dataset inspection utilities
+- Summary statistics for numerical and categorical variables
+- Quick diagnostics for tabular datasets
 
 ::: {toctree}
-:maxdepth: 2 :hidden: :caption: Contents:
+:maxdepth: 2
+:hidden: 
+:caption: Contents:
 
 Home <self>
 :::
@@ -56,12 +58,12 @@ This is the landing page of your docs. you can update it as you'd like
 to. This documentation example uses myst markdown as the primary
 documentation syntax.
 
-::: {button-link}
-<https://www.pyopensci.org/python-package-guide/documentation/hosting-tools/myst-markdown-rst-doc-syntax.html>
-:color: primary :class: sd-rounded-pill float-left
+```{button-link} https://www.pyopensci.org/python-package-guide/documentation/hosting-tools/myst-markdown-rst-doc-syntax.html
+:color: primary 
+:class: sd-rounded-pill float-left
 
 Learn more about myst in our pyOpenSci packaging guide.
-:::
+```
 
 Myst is a version of markdown that has more formatting flexibility. This
 is what a sphinx directive looks like using myst markdown formatting:
@@ -72,13 +74,13 @@ is what a sphinx directive looks like using myst markdown formatting:
 
 Inspects a pandas DataFrame and returns a concise overview including:
 
--   Column data types
--   Missing value counts
--   Basic summary statistics
+- Column data types
+- Missing value counts
+- Basic summary statistics
 
 **Example:**
 
-```{python}
+```python
 
 from autoeda.inspect import inspect_df
 
@@ -90,12 +92,12 @@ inspect_df(df)
 Identifies columns that are dominated by a single value, which may
 indicate low-information or near-constant features.
 
--   `threshold` controls how dominant a value must be to flag a column
--   `dropna` controls whether missing values are ignored
+- `threshold` controls how dominant a value must be to flag a column
+- `dropna` controls whether missing values are ignored
 
 **Example:**
 
-```{python}
+```python
 
 from autoeda.inspect import get_unary
 
@@ -107,12 +109,12 @@ get_unary(df)
 Identifies columns with a high number of unique values relative to the
 size of the dataset, which may require special encoding or handling.
 
--   `max_unique_ratio` defines the maximum allowed ratio of unique
+- `max_unique_ratio` defines the maximum allowed ratio of unique
     values
 
 **Example:**
 
-```{python}
+```python
 
 from autoeda.inspect import get_high_cardinality
 
@@ -127,7 +129,7 @@ statistics.
 
 **Example:**
 
-```{python}
+```python
 
  from autoeda.inspect import get_summary_df
 
@@ -139,11 +141,11 @@ get_summary_df(df)
 Checks each column for missing values and potential outliers, helping
 identify data quality issues that may require preprocessing.
 
--   `outlier_method` controls how outliers are detected
+- `outlier_method` controls how outliers are detected
 
 **Example:**
 
-```{python}
+```python
 
 from autoeda.inspect import check_na_outliers
 
@@ -156,12 +158,12 @@ Creates a correlation heatmap for numerical features in the dataset to
 help identify relationships between variables. If a target variable is
 provided, correlations with the target are highlighted.
 
--   `target` optionally specifies a target column
--   `method` controls the correlation metric used
+- `target` optionally specifies a target column
+- `method` controls the correlation metric used
 
 **Example:**
 
-```{python}
+```python
 
 from autoeda.inspect import plot_correlation_heatmap
 
@@ -169,16 +171,16 @@ plot_correlation_heatmap(df)
 ```
 
 ::: {toctree}
-:maxdepth: 2 :caption: Contents:
+:maxdepth: 2
+:caption: Contents:
 :::
 
-```         
-
+```text
 If you see syntax like the syntax below, you are looking at rst.
 ```
 
 ## Copyright
 
--   Copyright © 2026 Eli Gonzalez, Gurleen Kaur, Gloria Yi, Mantram
+- Copyright © 2026 Eli Gonzalez, Gurleen Kaur, Gloria Yi, Mantram
     Sharma.
--   Free software distributed under the MIT License.
+- Free software distributed under the MIT License.
