@@ -52,7 +52,7 @@ jobs:
         with:
           step: start
           token: ${{ secrets.GITHUB_TOKEN }}
-          env: ${{ env.RELEASE_NAME }}
+          env: github-pages
           ref: ${{ github.head_ref }}
           logs: 'https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}'
 
@@ -79,6 +79,6 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           status: ${{ job.status }}
           deployment_id: ${{ steps.deployment.outputs.deployment_id }}
-          env: ${{ env.RELEASE_NAME }}
+          env: github-pages
           env_url: ${{ steps.netlify.outputs.url }}
           logs: 'https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}'
