@@ -79,6 +79,6 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           status: ${{ job.status }}
           deployment_id: ${{ steps.deployment.outputs.deployment_id }}
-          env: ${{ steps.deployment.outputs.env }}
+          env: ${{ env.RELEASE_NAME }}
           env_url: ${{ steps.netlify.outputs.url }}
           logs: 'https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}'
