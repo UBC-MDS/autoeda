@@ -4,6 +4,8 @@ editor:
     wrap: 72
 ---
 
+# Welcome to AutoEDA's Documentation '
+
 # Welcome to AutoEDA
 
 **autoeda** is a Python package for automated exploratory data analysis
@@ -44,10 +46,31 @@ autoeda currently provides the following functionality:
 - Summary statistics for numerical and categorical variables
 - Quick diagnostics for tabular datasets
 
+::: {toctree}
+:maxdepth: 2
+:hidden: 
+:caption: Contents:
+
+Home <self>
+:::
+
+This is the landing page of your docs. you can update it as you'd like
+to. This documentation example uses myst markdown as the primary
+documentation syntax.
+
+```{button-link} https://www.pyopensci.org/python-package-guide/documentation/hosting-tools/myst-markdown-rst-doc-syntax.html
+:color: primary 
+:class: sd-rounded-pill float-left
+
+Learn more about myst in our pyOpenSci packaging guide.
+```
+
+Myst is a version of markdown that has more formatting flexibility. This
+is what a sphinx directive looks like using myst markdown formatting:
 
 ## Core Functions
 
- `inspect_df(df)`
+### `inspect_df(df)`
 
 Inspects a pandas DataFrame and returns a concise overview including:
 
@@ -64,7 +87,7 @@ from autoeda.inspect import inspect_df
 inspect_df(df)
 ```
 
- `get_unary(df, threshold=0.75, dropna=False)`
+### `get_unary(df, threshold=0.75, dropna=False)`
 
 Identifies columns that are dominated by a single value, which may
 indicate low-information or near-constant features.
@@ -81,7 +104,7 @@ from autoeda.inspect import get_unary
 get_unary(df)
 ```
 
- `get_high_cardinality(df, max_unique_ratio=0.5)`
+### `get_high_cardinality(df, max_unique_ratio=0.5)`
 
 Identifies columns with a high number of unique values relative to the
 size of the dataset, which may require special encoding or handling.
@@ -98,7 +121,7 @@ from autoeda.inspect import get_high_cardinality
 get_high_cardinality(df)
 ```
 
- `get_summary_df(df)`
+### `get_summary_df(df)`
 
 Generates a summary DataFrame that provides an overview of each column,
 including data types, counts, missing values, and basic descriptive
@@ -129,7 +152,7 @@ from autoeda.inspect import check_na_outliers
 check_na_outliers(df)
 ```
 
-`plot_correlation_heatmap(df, target=None, method="pearson")`
+### `plot_correlation_heatmap(df, target=None, method="pearson")`
 
 Creates a correlation heatmap for numerical features in the dataset to
 help identify relationships between variables. If a target variable is
@@ -147,6 +170,14 @@ from autoeda.inspect import plot_correlation_heatmap
 plot_correlation_heatmap(df)
 ```
 
+::: {toctree}
+:maxdepth: 2
+:caption: Contents:
+:::
+
+```text
+If you see syntax like the syntax below, you are looking at rst.
+```
 
 ## Copyright
 

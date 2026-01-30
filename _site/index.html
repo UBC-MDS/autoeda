@@ -146,6 +146,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
+<section id="welcome-to-autoedas-documentation" class="level1">
+<h1>Welcome to AutoEDA’s Documentation ’</h1>
+</section>
 <section id="welcome-to-autoeda" class="level1">
 <h1>Welcome to AutoEDA</h1>
 <p><strong>autoeda</strong> is a Python package for automated exploratory data analysis (EDA). It provides simple, reusable functions to inspect datasets, summarize variables, and generate quick diagnostics for tabular data.</p>
@@ -175,22 +178,36 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Summary statistics for numerical and categorical variables</li>
 <li>Quick diagnostics for tabular datasets</li>
 </ul>
-</section>
-<section id="core-functions" class="level2">
-<h2 class="anchored" data-anchor-id="core-functions">Core Functions</h2>
-<p><code>inspect_df(df)</code></p>
-<p>Inspects a pandas DataFrame and returns a concise overview including:</p>
-<ul>
-<li>Column data types</li>
-<li>Missing value counts</li>
-<li>Basic summary statistics</li>
-</ul>
-<p><strong>Example:</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> autoeda.inspect <span class="im">import</span> inspect_df</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>inspect_df(df)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p><code>get_unary(df, threshold=0.75, dropna=False)</code></p>
+<div class="{toctree}">
+<p>:maxdepth: 2 :hidden: :caption: Contents:</p>
+<p>Home <self></self></p>
+</div>
+<p>This is the landing page of your docs. you can update it as you’d like to. This documentation example uses myst markdown as the primary documentation syntax.</p>
+<p>```kftmoftlxkedg https://www.pyopensci.org/python-package-guide/documentation/hosting-tools/myst-markdown-rst-doc-syntax.html :color: primary :class: sd-rounded-pill float-left</p>
+<p>Learn more about myst in our pyOpenSci packaging guide.</p>
+<pre><code>
+Myst is a version of markdown that has more formatting flexibility. This
+is what a sphinx directive looks like using myst markdown formatting:
+
+## Core Functions
+
+### `inspect_df(df)`
+
+Inspects a pandas DataFrame and returns a concise overview including:
+
+- Column data types
+- Missing value counts
+- Basic summary statistics
+
+**Example:**
+
+```python
+
+from autoeda.inspect import inspect_df
+
+inspect_df(df)</code></pre>
+<section id="get_unarydf-threshold0.75-dropnafalse" class="level3">
+<h3 class="anchored" data-anchor-id="get_unarydf-threshold0.75-dropnafalse"><code>get_unary(df, threshold=0.75, dropna=False)</code></h3>
 <p>Identifies columns that are dominated by a single value, which may indicate low-information or near-constant features.</p>
 <ul>
 <li><code>threshold</code> controls how dominant a value must be to flag a column</li>
@@ -201,7 +218,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> autoeda.inspect <span class="im">import</span> get_unary</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>get_unary(df)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p><code>get_high_cardinality(df, max_unique_ratio=0.5)</code></p>
+</section>
+<section id="get_high_cardinalitydf-max_unique_ratio0.5" class="level3">
+<h3 class="anchored" data-anchor-id="get_high_cardinalitydf-max_unique_ratio0.5"><code>get_high_cardinality(df, max_unique_ratio=0.5)</code></h3>
 <p>Identifies columns with a high number of unique values relative to the size of the dataset, which may require special encoding or handling.</p>
 <ul>
 <li><code>max_unique_ratio</code> defines the maximum allowed ratio of unique values</li>
@@ -211,13 +230,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> autoeda.inspect <span class="im">import</span> get_high_cardinality</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>get_high_cardinality(df)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p><code>get_summary_df(df)</code></p>
+</section>
+<section id="get_summary_dfdf" class="level3">
+<h3 class="anchored" data-anchor-id="get_summary_dfdf"><code>get_summary_df(df)</code></h3>
 <p>Generates a summary DataFrame that provides an overview of each column, including data types, counts, missing values, and basic descriptive statistics.</p>
 <p><strong>Example:</strong></p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a> <span class="im">from</span> autoeda.inspect <span class="im">import</span> get_summary_df</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>get_summary_df(df)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
 <section id="check_na_outliersdf-outlier_methodauto" class="level3">
 <h3 class="anchored" data-anchor-id="check_na_outliersdf-outlier_methodauto"><code>check_na_outliers(df, outlier_method="auto")</code></h3>
 <p>Checks each column for missing values and potential outliers, helping identify data quality issues that may require preprocessing.</p>
@@ -229,7 +251,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> autoeda.inspect <span class="im">import</span> check_na_outliers</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>check_na_outliers(df)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p><code>plot_correlation_heatmap(df, target=None, method="pearson")</code></p>
+</section>
+<section id="plot_correlation_heatmapdf-targetnone-methodpearson" class="level3">
+<h3 class="anchored" data-anchor-id="plot_correlation_heatmapdf-targetnone-methodpearson"><code>plot_correlation_heatmap(df, target=None, method="pearson")</code></h3>
 <p>Creates a correlation heatmap for numerical features in the dataset to help identify relationships between variables. If a target variable is provided, correlations with the target are highlighted.</p>
 <ul>
 <li><code>target</code> optionally specifies a target column</li>
@@ -240,6 +264,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> autoeda.inspect <span class="im">import</span> plot_correlation_heatmap</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>plot_correlation_heatmap(df)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="{toctree}">
+<p>:maxdepth: 2 :caption: Contents:</p>
+</div>
+<pre class="text"><code>If you see syntax like the syntax below, you are looking at rst.</code></pre>
 </section>
 </section>
 <section id="copyright" class="level2">
