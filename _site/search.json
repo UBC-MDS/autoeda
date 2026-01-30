@@ -1,0 +1,365 @@
+[
+  {
+    "objectID": "reference/index.html",
+    "href": "reference/index.html",
+    "title": "Function reference",
+    "section": "",
+    "text": "Functions to perform automated exploratory data analysis.\n\n\n\nget_summary_df\nFunctions to support automated exploratory data analysis (EDA)\n\n\n\n\n\n\nFunctions to inspect data for common issues.\n\n\n\nget_unary\nReturns a list of columns with a single value with a relative\n\n\nget_high_cardinality\nIdentify columns with high cardinality.\n\n\n\n\n\n\nFunction to check amount of missing data in a DataFrame.\n\n\n\ncheck_na_outliers\nDiagnose missing values and outliers in a DataFrame.\n\n\n\n\n\n\nFunctions to create common plots for exploratory data analysis.\n\n\n\nplot_correlation_heatmap\nGenerate a correlation heatmap for numeric features in a dataset.\n\n\nplot_histograms_by_target\nPlot histograms of features grouped by a target variable.",
+    "crumbs": [
+      "Function reference"
+    ]
+  },
+  {
+    "objectID": "reference/index.html#summary-statistics",
+    "href": "reference/index.html#summary-statistics",
+    "title": "Function reference",
+    "section": "",
+    "text": "Functions to perform automated exploratory data analysis.\n\n\n\nget_summary_df\nFunctions to support automated exploratory data analysis (EDA)",
+    "crumbs": [
+      "Function reference"
+    ]
+  },
+  {
+    "objectID": "reference/index.html#data-inspection",
+    "href": "reference/index.html#data-inspection",
+    "title": "Function reference",
+    "section": "",
+    "text": "Functions to inspect data for common issues.\n\n\n\nget_unary\nReturns a list of columns with a single value with a relative\n\n\nget_high_cardinality\nIdentify columns with high cardinality.",
+    "crumbs": [
+      "Function reference"
+    ]
+  },
+  {
+    "objectID": "reference/index.html#missing-data-and-outliers",
+    "href": "reference/index.html#missing-data-and-outliers",
+    "title": "Function reference",
+    "section": "",
+    "text": "Function to check amount of missing data in a DataFrame.\n\n\n\ncheck_na_outliers\nDiagnose missing values and outliers in a DataFrame.",
+    "crumbs": [
+      "Function reference"
+    ]
+  },
+  {
+    "objectID": "reference/index.html#data-plotting",
+    "href": "reference/index.html#data-plotting",
+    "title": "Function reference",
+    "section": "",
+    "text": "Functions to create common plots for exploratory data analysis.\n\n\n\nplot_correlation_heatmap\nGenerate a correlation heatmap for numeric features in a dataset.\n\n\nplot_histograms_by_target\nPlot histograms of features grouped by a target variable.",
+    "crumbs": [
+      "Function reference"
+    ]
+  },
+  {
+    "objectID": "reference/plot_histograms_by_target.html",
+    "href": "reference/plot_histograms_by_target.html",
+    "title": "plot_histograms_by_target",
+    "section": "",
+    "text": "plot.plot_histograms_by_target(\n    df,\n    target,\n    features=None,\n    bins=30,\n    figsize=(12, 8),\n)\nPlot histograms of features grouped by a target variable.\nThis function visualizes the distribution of selected features conditioned on the target variable. This is useful for understanding class separation and feature behavior.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\ndf\npandas.DataFrame\nInput dataframe containing features and target.\nrequired\n\n\ntarget\nstr\nName of the target column.\nrequired\n\n\nfeatures\nlist of str\nList of feature column names to plot. If None, all numeric columns except the target will be used.\nNone\n\n\nbins\nint\nNumber of bins for the histograms.\n30\n\n\nfigsize\ntuple\nSize of the figure.\n(12, 8)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nmatplotlib.figure.Figure\nFigure object containing the histograms.",
+    "crumbs": [
+      "Data plotting",
+      "plot_histograms_by_target"
+    ]
+  },
+  {
+    "objectID": "reference/plot_histograms_by_target.html#parameters",
+    "href": "reference/plot_histograms_by_target.html#parameters",
+    "title": "plot_histograms_by_target",
+    "section": "",
+    "text": "Name\nType\nDescription\nDefault\n\n\n\n\ndf\npandas.DataFrame\nInput dataframe containing features and target.\nrequired\n\n\ntarget\nstr\nName of the target column.\nrequired\n\n\nfeatures\nlist of str\nList of feature column names to plot. If None, all numeric columns except the target will be used.\nNone\n\n\nbins\nint\nNumber of bins for the histograms.\n30\n\n\nfigsize\ntuple\nSize of the figure.\n(12, 8)",
+    "crumbs": [
+      "Data plotting",
+      "plot_histograms_by_target"
+    ]
+  },
+  {
+    "objectID": "reference/plot_histograms_by_target.html#returns",
+    "href": "reference/plot_histograms_by_target.html#returns",
+    "title": "plot_histograms_by_target",
+    "section": "",
+    "text": "Name\nType\nDescription\n\n\n\n\n\nmatplotlib.figure.Figure\nFigure object containing the histograms.",
+    "crumbs": [
+      "Data plotting",
+      "plot_histograms_by_target"
+    ]
+  },
+  {
+    "objectID": "reference/get_unary.html",
+    "href": "reference/get_unary.html",
+    "title": "get_unary",
+    "section": "",
+    "text": "inspect.get_unary(df, target=None, threshold=0.75, dropna=False)\nReturns a list of columns with a single value with a relative frequency percentage over a threshold (75% as default). In case user want only unary columns then threshold should be set to 1.\n\n\ndf: pandas dataframe to analyze. threshold: If the relative frequency of the value with the highest counting is over this threshold then column is selected. Default is 0.75. dropna: If considering or not null values as a value in frequencies. Default is False.\n\n\n\nunary_cols: list of unary columns.",
+    "crumbs": [
+      "Data inspection",
+      "get_unary"
+    ]
+  },
+  {
+    "objectID": "reference/get_unary.html#parameters",
+    "href": "reference/get_unary.html#parameters",
+    "title": "get_unary",
+    "section": "",
+    "text": "df: pandas dataframe to analyze. threshold: If the relative frequency of the value with the highest counting is over this threshold then column is selected. Default is 0.75. dropna: If considering or not null values as a value in frequencies. Default is False.",
+    "crumbs": [
+      "Data inspection",
+      "get_unary"
+    ]
+  },
+  {
+    "objectID": "reference/get_unary.html#returns",
+    "href": "reference/get_unary.html#returns",
+    "title": "get_unary",
+    "section": "",
+    "text": "unary_cols: list of unary columns.",
+    "crumbs": [
+      "Data inspection",
+      "get_unary"
+    ]
+  },
+  {
+    "objectID": "reference/get_high_cardinality.html",
+    "href": "reference/get_high_cardinality.html",
+    "title": "get_high_cardinality",
+    "section": "",
+    "text": "inspect.get_high_cardinality(df, max_unique_ratio=0.5)\nIdentify columns with high cardinality.\nA column is considered high cardinality if the ratio of unique values to the total number of rows exceeds max_unique_ratio.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\ndf\npandas.DataFrame\nInput DataFrame to inspect.\nrequired\n\n\nmax_unique_ratio\nfloat\nMaximum allowed ratio of unique values to total rows. Columns exceeding this threshold are flagged. Default is 0.5.\n0.5\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nlist of str\nList of column names with high cardinality.",
+    "crumbs": [
+      "Data inspection",
+      "get_high_cardinality"
+    ]
+  },
+  {
+    "objectID": "reference/get_high_cardinality.html#parameters",
+    "href": "reference/get_high_cardinality.html#parameters",
+    "title": "get_high_cardinality",
+    "section": "",
+    "text": "Name\nType\nDescription\nDefault\n\n\n\n\ndf\npandas.DataFrame\nInput DataFrame to inspect.\nrequired\n\n\nmax_unique_ratio\nfloat\nMaximum allowed ratio of unique values to total rows. Columns exceeding this threshold are flagged. Default is 0.5.\n0.5",
+    "crumbs": [
+      "Data inspection",
+      "get_high_cardinality"
+    ]
+  },
+  {
+    "objectID": "reference/get_high_cardinality.html#returns",
+    "href": "reference/get_high_cardinality.html#returns",
+    "title": "get_high_cardinality",
+    "section": "",
+    "text": "Name\nType\nDescription\n\n\n\n\n\nlist of str\nList of column names with high cardinality.",
+    "crumbs": [
+      "Data inspection",
+      "get_high_cardinality"
+    ]
+  },
+  {
+    "objectID": "CONTRIBUTING.html",
+    "href": "CONTRIBUTING.html",
+    "title": "Contributing",
+    "section": "",
+    "text": "We welcome any input, feedback, bug reports, and contributions to the AutoEDA package. This project aims to be a lightweight Python package designed to automate the most common and time consuming steps of Exploratory Data Analysis (EDA).\nYour contributions can help us:\n\nImprove functions performance and usability\nIncorporate additional features\nRefine visualizations\nExpand documentation\n\nAll contributions, suggestions, and feedback you submit are accepted under the Project’s license. You represent that if you do not own copyright in the code that you have the authority to submit it under the Project’s license. All feedback, suggestions, or contributions are not confidential.\n\n\nYou can contribute in many ways, for example:\n\nReport bugs\nFix Bugs\nImplement Features\nWrite Documentation\nSubmit Feedback\n\n\n\nReport bugs here -&gt; issues.\nIf you are reporting a bug, please follow the template guidelines. The more detailed your report, the easier and thus faster we can help you.\n\n\n\nLook through the GitHub issues for bugs. Anything labelled with bug and help wanted is open to whoever wants to implement it. When you decide to work on such an issue, please assign yourself to it and add a comment that you’ll be working on that, too. If you see another issue without the help wanted label, just post a comment, the maintainers are usually happy for any support that they can get.\n\n\n\nLook through the GitHub issues for features. Anything labelled with enhancement and help wanted is open to whoever wants to implement it. As for fixing bugs, please assign yourself to the issue and add a comment that you’ll be working on that, too. If another enhancement catches your fancy, but it doesn’t have the help wanted label, just post a comment, the maintainers are usually happy for any support that they can get.\n\n\n\nAutoEDA could always use more documentation, whether as part of the official documentation, in docstrings, or even on the web in blog posts, articles, and such. Just open an issue to let us know what you will be working on so that we can provide you with guidance.\n\n\n\nThe best way to send feedback is to file an issue at this link AutoEDA issues. If your feedback fits the format of one of the issue templates, please use that. Remember that this is a volunteer-driven project and everybody has limited time.\n\n\n\n\nReady to contribute? Here’s how to set up AutoEDA for local development.\n\nFork the https://github.com/Eligoze75/autoeda repository on GitHub.\nClone your fork locally (if you want to work locally)\ngit clone git@github.com:your_name_here/autoeda.git\nInstall hatch.\nCreate a branch for local development using the default branch (typically main) as a starting point. Use fix or feat as a prefix for your branch name.\ngit checkout main\ngit checkout -b fix-name-of-your-bugfix\nNow you can make your changes locally.\nWhen you’re done making changes, apply the quality assurance tools and check that your changes pass our test suite. This is all included with tox\nhatch run test:run\nCommit your changes and push your branch to GitHub. Please use semantic commit messages.\ngit add .\ngit commit -m \"fix: summarize your changes\"\ngit push -u origin fix-name-of-your-bugfix\nOpen the link displayed in the message when pushing your new branch in order to submit a pull request.\n\n\n\nBefore submitting your changes, ensure that:\n\nYour code runs without errors: Test all modified modules and functions\nDependencies are documented: Update requirements.txt if you add new packages (TBC)\n\n\n\n\nProvide a clear title and detailed description of your changes: - What problem does it solve? - What are the key results or improvements? - Are there any limitations or concerns?\nYour PR will be reviewed, and you may receive feedback or requests for changes.\n\n\n\n\nWe are committed to providing a welcoming and inclusive environment for all contributors. We expect all participants to:\n\nBe respectful and considerate in communications\nWelcome newcomers and help them get started\nAccept constructive criticism gracefully\n\n\n\n\nIf you have questions or want to discuss ideas before contributing:\n\nOpen an issue with the question or discussion label\nReach out to the maintainers\nShare your ideas and get feedback before investing significant time\n\n\n\n\nThank you for your interest in contributing to AutoEDA. Every suggestion, bug report, or enhancement no matter how small helps improve the quality, usability, and reliability of this package.\nBy contributing, you are helping make exploratory data analysis more accessible, nicer, and less time consuming for data scientists and analysts. Together, we can build better tools that support clearer insights and stronger data driven decisions.\nWe truly appreciate your time and effort in supporting this project.\n\nThis document was inspired by the Altair CONTRIBUTING.md and adapted for the Sepsis Survival Prediction Project."
+  },
+  {
+    "objectID": "CONTRIBUTING.html#example-contributions",
+    "href": "CONTRIBUTING.html#example-contributions",
+    "title": "Contributing",
+    "section": "",
+    "text": "You can contribute in many ways, for example:\n\nReport bugs\nFix Bugs\nImplement Features\nWrite Documentation\nSubmit Feedback\n\n\n\nReport bugs here -&gt; issues.\nIf you are reporting a bug, please follow the template guidelines. The more detailed your report, the easier and thus faster we can help you.\n\n\n\nLook through the GitHub issues for bugs. Anything labelled with bug and help wanted is open to whoever wants to implement it. When you decide to work on such an issue, please assign yourself to it and add a comment that you’ll be working on that, too. If you see another issue without the help wanted label, just post a comment, the maintainers are usually happy for any support that they can get.\n\n\n\nLook through the GitHub issues for features. Anything labelled with enhancement and help wanted is open to whoever wants to implement it. As for fixing bugs, please assign yourself to the issue and add a comment that you’ll be working on that, too. If another enhancement catches your fancy, but it doesn’t have the help wanted label, just post a comment, the maintainers are usually happy for any support that they can get.\n\n\n\nAutoEDA could always use more documentation, whether as part of the official documentation, in docstrings, or even on the web in blog posts, articles, and such. Just open an issue to let us know what you will be working on so that we can provide you with guidance.\n\n\n\nThe best way to send feedback is to file an issue at this link AutoEDA issues. If your feedback fits the format of one of the issue templates, please use that. Remember that this is a volunteer-driven project and everybody has limited time."
+  },
+  {
+    "objectID": "CONTRIBUTING.html#get-started",
+    "href": "CONTRIBUTING.html#get-started",
+    "title": "Contributing",
+    "section": "",
+    "text": "Ready to contribute? Here’s how to set up AutoEDA for local development.\n\nFork the https://github.com/Eligoze75/autoeda repository on GitHub.\nClone your fork locally (if you want to work locally)\ngit clone git@github.com:your_name_here/autoeda.git\nInstall hatch.\nCreate a branch for local development using the default branch (typically main) as a starting point. Use fix or feat as a prefix for your branch name.\ngit checkout main\ngit checkout -b fix-name-of-your-bugfix\nNow you can make your changes locally.\nWhen you’re done making changes, apply the quality assurance tools and check that your changes pass our test suite. This is all included with tox\nhatch run test:run\nCommit your changes and push your branch to GitHub. Please use semantic commit messages.\ngit add .\ngit commit -m \"fix: summarize your changes\"\ngit push -u origin fix-name-of-your-bugfix\nOpen the link displayed in the message when pushing your new branch in order to submit a pull request.\n\n\n\nBefore submitting your changes, ensure that:\n\nYour code runs without errors: Test all modified modules and functions\nDependencies are documented: Update requirements.txt if you add new packages (TBC)\n\n\n\n\nProvide a clear title and detailed description of your changes: - What problem does it solve? - What are the key results or improvements? - Are there any limitations or concerns?\nYour PR will be reviewed, and you may receive feedback or requests for changes."
+  },
+  {
+    "objectID": "CONTRIBUTING.html#code-of-conduct",
+    "href": "CONTRIBUTING.html#code-of-conduct",
+    "title": "Contributing",
+    "section": "",
+    "text": "We are committed to providing a welcoming and inclusive environment for all contributors. We expect all participants to:\n\nBe respectful and considerate in communications\nWelcome newcomers and help them get started\nAccept constructive criticism gracefully"
+  },
+  {
+    "objectID": "CONTRIBUTING.html#questions-and-discussions",
+    "href": "CONTRIBUTING.html#questions-and-discussions",
+    "title": "Contributing",
+    "section": "",
+    "text": "If you have questions or want to discuss ideas before contributing:\n\nOpen an issue with the question or discussion label\nReach out to the maintainers\nShare your ideas and get feedback before investing significant time"
+  },
+  {
+    "objectID": "CONTRIBUTING.html#acknowledgments",
+    "href": "CONTRIBUTING.html#acknowledgments",
+    "title": "Contributing",
+    "section": "",
+    "text": "Thank you for your interest in contributing to AutoEDA. Every suggestion, bug report, or enhancement no matter how small helps improve the quality, usability, and reliability of this package.\nBy contributing, you are helping make exploratory data analysis more accessible, nicer, and less time consuming for data scientists and analysts. Together, we can build better tools that support clearer insights and stronger data driven decisions.\nWe truly appreciate your time and effort in supporting this project.\n\nThis document was inspired by the Altair CONTRIBUTING.md and adapted for the Sepsis Survival Prediction Project."
+  },
+  {
+    "objectID": "CODE_OF_CONDUCT.html",
+    "href": "CODE_OF_CONDUCT.html",
+    "title": "Contributor Covenant Code of Conduct",
+    "section": "",
+    "text": "Eli Gonzalez, Gurleen Kaur, Gloria Yi, Mantram Sharma\n\n\nWe pledge to make our community welcoming, safe, and equitable for all.\nWe are committed to fostering an environment that is respecting and promoting the dignity, rights, and contributions of all individuals, regardless of race, ethnicity, caste, color, age, physical characteristics, neurodiversity, disability, sex, gender identity or expression, sexual orientation, language, philosophy or religion, national or social origin, socio-economic position, other characteristics.\nWe extend the privilege of participation to all members of our community, including contributors, maintainers, moderators, and organizers.\n\n\n\nExamples of behaviours that contribute to a positive environment:\n\nRespecting the community and diverse perspectives and experiences.\nEngaging with empathy and kindness towards all.\nAccounability for our actions and contributions.\nProviding constructive feedback with grace.\nSupporting the well-being and growth of the community.\n\nExamples of unacceptable behaviours by participants:\n\nViolating boundaries of another participant.\nPersonal comments on an individual or group’s appearance, identity, or personal characteristics.\nCommunication that is sexually suggestive or inappropriately intimate.\nUsing or sharing information about others without their knowing and permission.\nEngaging in acts of violence or harassment towards anyone.\n\n\n\n\nIn the instance that one violates the Code of Conduct, please email sharma.mantram@gmail.com. Appropriate and fair measures will be taken by the Community Moderators to handle this immediately.\nCommunity Moderators will be responsible for making judgments on whether a violation has occured and communication will be directly with the involved parties.\n\n\n\nCommunity Moderators will follow these guidelines when addressing actions that violate this code of conduct.\n\nCorrection\n\nEvent: Use of derogatory language, signs or inappropriate behaviour.\nConsequence: A private conversation to address the violation and discuss corrections.\n\nWarning\n\nEvent: A single incident or series of incidents.\nConsequence: A written warning outlining the behaviour, its impact and next steps if continues.\n\nTemporary Ban\n\nEvent: Repeated violations which have been addressed before or a single serious violation.\nConsequence: A written notice explaining the duration of the temporary ban and expectations for returning to the community.\n\nPermanent Ban\n\nEvent: Ongoing or severe violations that compromise community safety or well-being.\nConsequence: A written notice and permanent removal of access from all related community spaces.\n\n\n\n\n\nThis Code of Conduct applies to all community spaces and participation. It also applies beyond this space to when an individual represents the community elsewhere. This could be anything from using the official email addresses, posting from a official social media, or participating in events as a designated representative.\n\n\n\nThis Code of Conduct is adapted from the Contributor Covenant, version 3.0, permanently available at https://www.contributor-covenant.org/version/3/0/.\nContributor Covenant is stewarded by the Organization for Ethical Source and licensed under CC BY-SA 4.0. To view a copy of this license, visit https://creativecommons.org/licenses/by-sa/4.0/\nThis Code of Conduct is inspired from the work of Sky Sheng.\nThis Code of Conduct is adapted from the work of Heart-Disease-Predictor—Group16\nFor answers to common questions about Contributor Covenant, see the FAQ at https://www.contributor-covenant.org/faq. Translations are provided at https://www.contributor-covenant.org/translations. Additional enforcement and community guideline resources can be found at https://www.contributor-covenant.org/resources. The enforcement ladder was inspired by the work of Mozilla’s code of conduct team."
+  },
+  {
+    "objectID": "CODE_OF_CONDUCT.html#our-pledge",
+    "href": "CODE_OF_CONDUCT.html#our-pledge",
+    "title": "Contributor Covenant Code of Conduct",
+    "section": "",
+    "text": "We pledge to make our community welcoming, safe, and equitable for all.\nWe are committed to fostering an environment that is respecting and promoting the dignity, rights, and contributions of all individuals, regardless of race, ethnicity, caste, color, age, physical characteristics, neurodiversity, disability, sex, gender identity or expression, sexual orientation, language, philosophy or religion, national or social origin, socio-economic position, other characteristics.\nWe extend the privilege of participation to all members of our community, including contributors, maintainers, moderators, and organizers."
+  },
+  {
+    "objectID": "CODE_OF_CONDUCT.html#our-standards",
+    "href": "CODE_OF_CONDUCT.html#our-standards",
+    "title": "Contributor Covenant Code of Conduct",
+    "section": "",
+    "text": "Examples of behaviours that contribute to a positive environment:\n\nRespecting the community and diverse perspectives and experiences.\nEngaging with empathy and kindness towards all.\nAccounability for our actions and contributions.\nProviding constructive feedback with grace.\nSupporting the well-being and growth of the community.\n\nExamples of unacceptable behaviours by participants:\n\nViolating boundaries of another participant.\nPersonal comments on an individual or group’s appearance, identity, or personal characteristics.\nCommunication that is sexually suggestive or inappropriately intimate.\nUsing or sharing information about others without their knowing and permission.\nEngaging in acts of violence or harassment towards anyone."
+  },
+  {
+    "objectID": "CODE_OF_CONDUCT.html#enforcement",
+    "href": "CODE_OF_CONDUCT.html#enforcement",
+    "title": "Contributor Covenant Code of Conduct",
+    "section": "",
+    "text": "In the instance that one violates the Code of Conduct, please email sharma.mantram@gmail.com. Appropriate and fair measures will be taken by the Community Moderators to handle this immediately.\nCommunity Moderators will be responsible for making judgments on whether a violation has occured and communication will be directly with the involved parties."
+  },
+  {
+    "objectID": "CODE_OF_CONDUCT.html#enforcement-guidelines",
+    "href": "CODE_OF_CONDUCT.html#enforcement-guidelines",
+    "title": "Contributor Covenant Code of Conduct",
+    "section": "",
+    "text": "Community Moderators will follow these guidelines when addressing actions that violate this code of conduct.\n\nCorrection\n\nEvent: Use of derogatory language, signs or inappropriate behaviour.\nConsequence: A private conversation to address the violation and discuss corrections.\n\nWarning\n\nEvent: A single incident or series of incidents.\nConsequence: A written warning outlining the behaviour, its impact and next steps if continues.\n\nTemporary Ban\n\nEvent: Repeated violations which have been addressed before or a single serious violation.\nConsequence: A written notice explaining the duration of the temporary ban and expectations for returning to the community.\n\nPermanent Ban\n\nEvent: Ongoing or severe violations that compromise community safety or well-being.\nConsequence: A written notice and permanent removal of access from all related community spaces."
+  },
+  {
+    "objectID": "CODE_OF_CONDUCT.html#scope",
+    "href": "CODE_OF_CONDUCT.html#scope",
+    "title": "Contributor Covenant Code of Conduct",
+    "section": "",
+    "text": "This Code of Conduct applies to all community spaces and participation. It also applies beyond this space to when an individual represents the community elsewhere. This could be anything from using the official email addresses, posting from a official social media, or participating in events as a designated representative."
+  },
+  {
+    "objectID": "CODE_OF_CONDUCT.html#attribution",
+    "href": "CODE_OF_CONDUCT.html#attribution",
+    "title": "Contributor Covenant Code of Conduct",
+    "section": "",
+    "text": "This Code of Conduct is adapted from the Contributor Covenant, version 3.0, permanently available at https://www.contributor-covenant.org/version/3/0/.\nContributor Covenant is stewarded by the Organization for Ethical Source and licensed under CC BY-SA 4.0. To view a copy of this license, visit https://creativecommons.org/licenses/by-sa/4.0/\nThis Code of Conduct is inspired from the work of Sky Sheng.\nThis Code of Conduct is adapted from the work of Heart-Disease-Predictor—Group16\nFor answers to common questions about Contributor Covenant, see the FAQ at https://www.contributor-covenant.org/faq. Translations are provided at https://www.contributor-covenant.org/translations. Additional enforcement and community guideline resources can be found at https://www.contributor-covenant.org/resources. The enforcement ladder was inspired by the work of Mozilla’s code of conduct team."
+  },
+  {
+    "objectID": "CHANGELOG.html",
+    "href": "CHANGELOG.html",
+    "title": "Changelog",
+    "section": "",
+    "text": "All notable changes to this project will be documented in this file.\nThe format is based on Keep a Changelog, and this project adheres to Semantic Versioning.\n\n\n\nUpcoming features and fixes\n\n\n\n\n\nFirst release"
+  },
+  {
+    "objectID": "CHANGELOG.html#unreleased",
+    "href": "CHANGELOG.html#unreleased",
+    "title": "Changelog",
+    "section": "",
+    "text": "Upcoming features and fixes"
+  },
+  {
+    "objectID": "CHANGELOG.html#section",
+    "href": "CHANGELOG.html#section",
+    "title": "Changelog",
+    "section": "",
+    "text": "First release"
+  },
+  {
+    "objectID": "DEVELOPMENT.html",
+    "href": "DEVELOPMENT.html",
+    "title": "Development Guide",
+    "section": "",
+    "text": "Welcome to your shiny new package. This page will help you get started with using Hatch to manage your package.\nIf you look at your project, you will see that a pyproject.toml file. This file stores both your package configuration and settings for development tools like Hatch that you will use to work on your package.\nThis file is written using a .toml format. You can learn more about toml here. Here’s the TL&DR:\n\nEach [] section in the toml file is called a table.\nYou can nest tables with double brackets like this[[]]\nTables contain information about a element that you want to configure.\n\nWe are using Hatch as the default packaging tool. Hatch allows you to configure and run environments and scripts similar to workflow tools like tox or nox.\nHach, by default, uses virtual environments (venv) to manage environments. But you can configure it to use other environment tools.Read the hatch documentation to learn more about environments.\nFor this template, we have set up Hatch environments for you to use. At the bottom of your pyproject.toml file, notice a hatch environment section that looks like this:\n########################################\n# Hatch Environments\n########################################\nBelow is the Hatch environment to install your package. Notice that it defines pip and twine as two packages that the environment needs.\n[tool.hatch.envs.build]\ndescription = \"\"\"Test the installation the package.\"\"\"\ndependencies = [\n    \"pip\",\n    \"twine\",\n]\nThe table below defines the scripts that you will run build and check your package.\n[tool.hatch.envs.build.scripts]\ncheck = [\n    \"pip check\",\n    \"hatch build {args:--clean}\",\n    \"twine check dist/*\",\n]\ndetached = true\nYou can enter that environment to check it out:\n$ hatch shell build\nIf you run pip list, in the environment, twine will be there:\n$ pip list\nHatch by default, installs your package in editable mode (-e) into its virtual environments. But if detached=True is set, then it will skip installing your package into the virtual enviornment.\n\n\nBelow you see the Hatch environment test table.\ntool.hatch.envs says, “Hey, Hatch, this is the definition for an environment.” test is the name of the environment.\nThe environment below defines the dependencies that Hatch needs to install into the environment named test.\n[tool.hatch.envs.test]\ndescription = \"\"\"Run the test suite.\"\"\"\ndependencies = [\n    \"pytest\",\n    \"pytest-cov\",\n    \"pytest-raises\",\n    \"pytest-randomly\",\n    \"pytest-xdist\",\n]\nTo enter a Hatch environment use:\nhatch shell environmentname\nSo you can enter the test environment above with:\nhatch shell test\n\n\n\nIf the environment has a matrix associated with it, that tells Hatch to run the test scripts across different Python versions.\n[[tool.hatch.envs.test.matrix]]\npython = [\"3.10\", \"3.11\", \"3.12\", \"3.13\"]\nIf you run hatch shell test, you will see the output below. To enter an environment with a matrix attached to it, you need to pick the Python environment version that you want to open.\n$ hatch shell test                           \nEnvironment `test` defines a matrix, choose one of the following instead:\n\ntest.py3.10\ntest.py3.11\ntest.py3.12\ntest.py3.13\nOpen the Python 3.13 environment like this:\n$ hatch shell test.py3.13\nTo leave an environment use:\n$ deactivate\n\n\n\nIn the tests section of your pyproject.toml, you will see a tool.hatch.envs.test.scripts table.\nThis table defines the commands that you want Hatch to run in the test environment. Notice that the script has one command called run.\n[tool.hatch.envs.test.scripts]\nrun = \"pytest {args:--cov=greatproject --cov-report=term-missing}\"\nTo run this script , use:\nhatch run test:run\n\nhatch run: calls Hatch and tells it that it will be running a command\ntest:run: defines the environment you want it to run (test) and defines the name of the “script” to berun.\n\nIf you have a Hatch matrix setup for tests, it will both install the necessary Python version using UV and run your tests on each version of the Python versions that you declare in the matrix table. In this case, there are 4 Python versions in the environment, so your tests will run 4 times, once in each Python version listed in the matrix table.\n@lwasser ➜ /workspaces/pyopensci-scipy25-create-python-package (main) $ hatch run test:run\n──────────────────────────────────────────────────────────────────────── test.py3.10 ────────────────────────────────────────────────────────────────────────\n==================================================================== test session starts ====================================================================\nplatform linux -- Python 3.10.16, pytest-8.4.1, pluggy-1.6.0\nUsing --randomly-seed=1490740387\nrootdir: /workspaces/pyopensci-scipy25-create-python-package\nconfigfile: pyproject.toml\ntestpaths: tests\nplugins: xdist-3.8.0, randomly-3.16.0, raises-0.11, cov-6.2.1\ncollected 2 items                                                                                                                                           \n\ntests/system/test_import.py .                                                                                                                         [ 50%]\ntests/unit/test_example.py .                                                                                                                          [100%]\n\n====================================================================== tests coverage =======================================================================\n_____________________________________________________ coverage: platform linux, python 3.10.16-final-0 ______________________________________________________\n\nName                           Stmts   Miss Branch BrPart    Cover   Missing\n----------------------------------------------------------------------------\nsrc/greatproject/__init__.py       0      0      0      0  100.00%\nsrc/greatproject/example.py        2      0      0      0  100.00%\n----------------------------------------------------------------------------\nTOTAL                              2      0      0      0  100.00%\n===================================================================== 2 passed in 0.05s =====================================================================\n──────────────────────────────────────────────────────────────────────── test.py3.11 ────────────────────────────────────────────────────────────────────────\n==================================================================== test session starts ====================================================================\nplatform linux -- Python 3.11.12, pytest-8.4.1, pluggy-1.6.0\nUsing --randomly-seed=1596865075\nrootdir: /workspaces/pyopensci-scipy25-create-python-package\nconfigfile: pyproject.toml\ntestpaths: tests\nplugins: xdist-3.8.0, randomly-3.16.0, raises-0.11, cov-6.2.1\ncollected 2 items                                                                                                                                           \n\ntests/system/test_import.py .                                                                                                                         [ 50%]\ntests/unit/test_example.py .                                                                                                                          [100%]\n\n====================================================================== tests coverage =======================================================================\n_____________________________________________________ coverage: platform linux, python 3.11.12-final-0 ______________________________________________________\n\nName                           Stmts   Miss Branch BrPart    Cover   Missing\n----------------------------------------------------------------------------\nsrc/greatproject/__init__.py       0      0      0      0  100.00%\nsrc/greatproject/example.py        2      0      0      0  100.00%\n----------------------------------------------------------------------------\nTOTAL                              2      0      0      0  100.00%\n===================================================================== 2 passed in 0.05s =====================================================================\n\n\n\nYou can build your package using the environment and scripts defined in the build tables:\nhatch run build:check\nThis script builds and checks the output distribution files of your package.\nThis build environment table declares that pip and twine should be added to that environment. Adding pip to the environment ensures that it is a current, up-to-date version.\n[tool.hatch.envs.build]\ndescription = \"\"\"Build and test your package.\"\"\"\ndependencies = [\n    \"pip\",\n    \"twine\",\n]\ndetached = true\n# This table installs created the command hatch run install:check which will build and check your package.\n[tool.hatch.envs.install.scripts]\ncheck = [\n    \"pip check\",\n    \"hatch build {args:--clean}\",\n    \"twine check dist/*\",\n]\nThis uses the above environment and tells hatch to run\n\npip check, # verifies your dependencies\nhatch build --clean\n\ntwine check dist/* # this checks your distribution for metadata and other potential issues. to build and test your package."
+  },
+  {
+    "objectID": "DEVELOPMENT.html#build-your-package",
+    "href": "DEVELOPMENT.html#build-your-package",
+    "title": "Development Guide",
+    "section": "",
+    "text": "You can build your package using the environment and scripts defined in the build tables:\nhatch run build:check\nThis script builds and checks the output distribution files of your package.\nThis build environment table declares that pip and twine should be added to that environment. Adding pip to the environment ensures that it is a current, up-to-date version.\n[tool.hatch.envs.build]\ndescription = \"\"\"Build and test your package.\"\"\"\ndependencies = [\n    \"pip\",\n    \"twine\",\n]\ndetached = true\n# This table installs created the command hatch run install:check which will build and check your package.\n[tool.hatch.envs.install.scripts]\ncheck = [\n    \"pip check\",\n    \"hatch build {args:--clean}\",\n    \"twine check dist/*\",\n]\nThis uses the above environment and tells hatch to run\n\npip check, # verifies your dependencies\nhatch build --clean\n\ntwine check dist/* # this checks your distribution for metadata and other potential issues. to build and test your package."
+  },
+  {
+    "objectID": "reference/plot_correlation_heatmap.html",
+    "href": "reference/plot_correlation_heatmap.html",
+    "title": "plot_correlation_heatmap",
+    "section": "",
+    "text": "plot.plot_correlation_heatmap(\n    df,\n    target=None,\n    method='pearson',\n    figsize=(10, 8),\n)\nGenerate a correlation heatmap for numeric features in a dataset.\nThis function computes pairwise correlations between numeric columns and visualizes them as a heatmap. Optionally, a target column can be highlighted to show correlations specifically with the target.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\ndf\npandas.DataFrame\nInput dataframe containing numeric and non-numeric features.\nrequired\n\n\ntarget\nstr\nName of the target column. If provided, correlations with the target may be emphasized or displayed separately.\nNone\n\n\nmethod\n(pearson, spearman, kendall)\nCorrelation method to use.\n\"pearson\"\n\n\nfigsize\ntuple\nSize of the heatmap figure.\n(10, 8)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nmatplotlib.axes.Axes\nThe Axes object containing the heatmap visualization.",
+    "crumbs": [
+      "Data plotting",
+      "plot_correlation_heatmap"
+    ]
+  },
+  {
+    "objectID": "reference/plot_correlation_heatmap.html#parameters",
+    "href": "reference/plot_correlation_heatmap.html#parameters",
+    "title": "plot_correlation_heatmap",
+    "section": "",
+    "text": "Name\nType\nDescription\nDefault\n\n\n\n\ndf\npandas.DataFrame\nInput dataframe containing numeric and non-numeric features.\nrequired\n\n\ntarget\nstr\nName of the target column. If provided, correlations with the target may be emphasized or displayed separately.\nNone\n\n\nmethod\n(pearson, spearman, kendall)\nCorrelation method to use.\n\"pearson\"\n\n\nfigsize\ntuple\nSize of the heatmap figure.\n(10, 8)",
+    "crumbs": [
+      "Data plotting",
+      "plot_correlation_heatmap"
+    ]
+  },
+  {
+    "objectID": "reference/plot_correlation_heatmap.html#returns",
+    "href": "reference/plot_correlation_heatmap.html#returns",
+    "title": "plot_correlation_heatmap",
+    "section": "",
+    "text": "Name\nType\nDescription\n\n\n\n\n\nmatplotlib.axes.Axes\nThe Axes object containing the heatmap visualization.",
+    "crumbs": [
+      "Data plotting",
+      "plot_correlation_heatmap"
+    ]
+  },
+  {
+    "objectID": "reference/check_na_outliers.html",
+    "href": "reference/check_na_outliers.html",
+    "title": "check_na_outliers",
+    "section": "",
+    "text": "check_na_outlier.check_na_outliers(\n    df,\n    outlier_method='auto',\n    na_threshold=0.1,\n    outlier_threshold=0.05,\n    return_risk=True,\n    return_suggestions=True,\n)\nDiagnose missing values and outliers in a DataFrame.\nThis function summarizes the amount of missing values and potential outliers for each column in the input dataset. It is intended for exploratory data analysis and provides interpretable diagnostics for future data preprocessing.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\ndf\npandas.DataFrame\nInput dataset for exploratory data analysis.\nrequired\n\n\noutlier_method\n(auto, iqr, zscore, mad)\nMethod used to detect outliers in numeric columns. If “auto”, the most appropriate method is selected, based on the distribution of each column.\n\"auto\"\n\n\nna_threshold\nfloat\nProportion threshold above which missing values are flagged as high risk. Further investigation or imputation may be needed if there are lots of missing values.\n0.1\n\n\noutlier_threshold\nfloat\nProportion threshold above which outliers are flagged as high risk.\n0.05\n\n\nreturn_risk\nbool\nWhether to compute and return qualitative risk levels (e.g., “low”, “medium”, “high”) based on the specified thresholds.\nTrue\n\n\nreturn_suggestions\nbool\nWhether to include suggested actions for handling missing values and outliers (e.g., imputation or transformation).\nTrue\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\npandas.DataFrame\nA summary table with one row per column, including missing value statistics, outlier statistics (for numeric columns), and optional risk levels and suggested actions.",
+    "crumbs": [
+      "Missing data and outliers",
+      "check_na_outliers"
+    ]
+  },
+  {
+    "objectID": "reference/check_na_outliers.html#parameters",
+    "href": "reference/check_na_outliers.html#parameters",
+    "title": "check_na_outliers",
+    "section": "",
+    "text": "Name\nType\nDescription\nDefault\n\n\n\n\ndf\npandas.DataFrame\nInput dataset for exploratory data analysis.\nrequired\n\n\noutlier_method\n(auto, iqr, zscore, mad)\nMethod used to detect outliers in numeric columns. If “auto”, the most appropriate method is selected, based on the distribution of each column.\n\"auto\"\n\n\nna_threshold\nfloat\nProportion threshold above which missing values are flagged as high risk. Further investigation or imputation may be needed if there are lots of missing values.\n0.1\n\n\noutlier_threshold\nfloat\nProportion threshold above which outliers are flagged as high risk.\n0.05\n\n\nreturn_risk\nbool\nWhether to compute and return qualitative risk levels (e.g., “low”, “medium”, “high”) based on the specified thresholds.\nTrue\n\n\nreturn_suggestions\nbool\nWhether to include suggested actions for handling missing values and outliers (e.g., imputation or transformation).\nTrue",
+    "crumbs": [
+      "Missing data and outliers",
+      "check_na_outliers"
+    ]
+  },
+  {
+    "objectID": "reference/check_na_outliers.html#returns",
+    "href": "reference/check_na_outliers.html#returns",
+    "title": "check_na_outliers",
+    "section": "",
+    "text": "Name\nType\nDescription\n\n\n\n\n\npandas.DataFrame\nA summary table with one row per column, including missing value statistics, outlier statistics (for numeric columns), and optional risk levels and suggested actions.",
+    "crumbs": [
+      "Missing data and outliers",
+      "check_na_outliers"
+    ]
+  },
+  {
+    "objectID": "reference/get_summary_df.html",
+    "href": "reference/get_summary_df.html",
+    "title": "get_summary_df",
+    "section": "",
+    "text": "get_summary_df\nFunctions to support automated exploratory data analysis (EDA)\n\n\n\n\n\nName\nDescription\n\n\n\n\nget_summary_df\nReturns a summary dataframe with the main statistics, datatypes,\n\n\n\n\n\nget_summary_df.get_summary_df(df, categorical_columns, numerical_columns)\nReturns a summary dataframe with the main statistics, datatypes, counts/missing values for numerical and categorical columns.\nFor categorical columns, the summary includes: - Data types - Number of non-null values - Count of missing values - Most common value/category\nFor numerical columns, the summary includes: - Data types - Count of non-null values - Count of missing values - Mean - Standard deviation - Minimum value - Maximum value\nParameters: df: Pandas DataFrame. categorical_columns: names of the columns with categorical data. numerical_columns: names of the columns with numerical data.\nReturns: categorical_df: summary dataframe for categorical columns. numerical_df: summary dataframe for numerical columns.",
+    "crumbs": [
+      "Summary statistics",
+      "get_summary_df"
+    ]
+  },
+  {
+    "objectID": "reference/get_summary_df.html#functions",
+    "href": "reference/get_summary_df.html#functions",
+    "title": "get_summary_df",
+    "section": "",
+    "text": "Name\nDescription\n\n\n\n\nget_summary_df\nReturns a summary dataframe with the main statistics, datatypes,\n\n\n\n\n\nget_summary_df.get_summary_df(df, categorical_columns, numerical_columns)\nReturns a summary dataframe with the main statistics, datatypes, counts/missing values for numerical and categorical columns.\nFor categorical columns, the summary includes: - Data types - Number of non-null values - Count of missing values - Most common value/category\nFor numerical columns, the summary includes: - Data types - Count of non-null values - Count of missing values - Mean - Standard deviation - Minimum value - Maximum value\nParameters: df: Pandas DataFrame. categorical_columns: names of the columns with categorical data. numerical_columns: names of the columns with numerical data.\nReturns: categorical_df: summary dataframe for categorical columns. numerical_df: summary dataframe for numerical columns.",
+    "crumbs": [
+      "Summary statistics",
+      "get_summary_df"
+    ]
+  }
+]
