@@ -34,7 +34,6 @@ jobs:
 
       - name: Render Quarto Project
         run: | 
-          cd docs 
           quarto render
 
       # =====================================================
