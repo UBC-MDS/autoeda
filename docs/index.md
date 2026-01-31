@@ -48,10 +48,11 @@ autoeda currently provides the following functionality:
 
 ::: {toctree}
 :maxdepth: 2
-:hidden: 
+:hidden:
 :caption: Contents:
 
-Home <self>
+Home
+self
 :::
 
 This is the landing page of your docs. you can update it as you'd like
