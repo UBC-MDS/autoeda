@@ -30,7 +30,6 @@ jobs:
       
       - name: quartodoc build
         run: |
-          cd docs
           quartodoc build
 
       - name: Render Quarto Project
