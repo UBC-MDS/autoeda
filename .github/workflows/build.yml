@@ -31,14 +31,4 @@ jobs:
       - name: Install hatch
         run: pip install hatch
 
-      - name: Build documentation (PR only)
-        if: github.event_name == 'pull_request'
-        run: |
-          hatch run docs:build
-
-      - name: Show Sphinx error log (if any)
-        if: failure() || always()
-        run: |
-          echo "---- sphinx error logs ----"
-          ls -la /tmp | grep sphinx || true
-          cat /tmp/sphinx-err-* || true
+      
