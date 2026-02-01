@@ -95,6 +95,11 @@ Run tests
 pytest
 ```
 
+## Documentation
+
+For detailed usage instructions, examples, and API reference, please visit the [AutoEDA documentation website](https://ubc-mds.github.io/autoeda/).
+The site provides step by step guides and practical examples to help you get the most out of the package.
+
 ## Contributors
 
 - Eli Gonzalez
