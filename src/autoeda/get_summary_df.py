@@ -49,7 +49,6 @@ def get_summary_df(df, categorical_columns, numerical_columns):
                     df.loc[:, column].dtypes,
                     df.loc[:, column].count(),
                     np.sum(df.loc[:, column].isnull()),
-                    # Reference: https://stackoverflow.com/questions/48590268/pandas-get-the-most-frequent-values-of-a-column
                     df.loc[:, column].mode()[0],
                 ]
             )
@@ -69,7 +68,8 @@ def get_summary_df(df, categorical_columns, numerical_columns):
                     df.loc[:, column].max(),
                 ]
             )
-    categorical_df, numerical_df = categorical_df.transpose(), numerical_df.transpose()
+    categorical_df = categorical_df.transpose()
+    numerical_df = numerical_df.transpose()
     categorical_df.columns = [
         "Data Type",
         "Non-Null Count",

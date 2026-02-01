@@ -2,7 +2,6 @@
 Functions to support automated exploratory data analysis (EDA)
 """
 
-import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
@@ -114,16 +113,3 @@ def plot_histograms_by_target(df, target, features=None, bins=30, figsize=(12, 8
 
     plt.tight_layout()
     return fig
-
-
-def test_plot_histograms_by_target_no_numeric_features():
-    """Test that an error is raised if no numeric features are available."""
-    df = pd.DataFrame(
-        {
-            "class": ["A", "B", "A", "B"],
-            "city": ["Toronto", "Vancouver", "Calgary", "Montreal"],
-        }
-    )
-
-    with pytest.raises(ValueError):
-        plot.plot_histograms_by_target(df, target="class")
