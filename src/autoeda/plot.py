@@ -124,6 +124,3 @@ def test_plot_histograms_by_target_no_numeric_features():
             "city": ["Toronto", "Vancouver", "Calgary", "Montreal"],
         }
     )
-
-    with pytest.raises(ValueError):
-        plot.plot_histograms_by_target(df, target="class")

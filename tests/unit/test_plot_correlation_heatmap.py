@@ -1,7 +1,6 @@
 import pandas as pd
 import matplotlib
 import pytest
-
 import autoeda.plot as plot
 
 
@@ -50,7 +49,10 @@ def test_plot_correlation_heatmap_no_numeric_columns():
 
 
 def test_plot_correlation_heatmap_handles_nans():
-    """test to make sure NAN values are not breaking the heatmap by dropping those values"""
+    """
+    test to make sure NAN values are not breaking the
+    heatmap by dropping those values
+    """
     df = pd.DataFrame(
         {
             "age": [22, 25, None, 35],
