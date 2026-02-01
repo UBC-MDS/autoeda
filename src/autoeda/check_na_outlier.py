@@ -52,7 +52,6 @@ def check_na_outliers(
         missing value statistics, outlier statistics (for numeric
         columns), and optional risk levels and suggested actions.
     """
-    
 
     # Input validation
     if not isinstance(df, pd.DataFrame):
@@ -66,9 +65,7 @@ def check_na_outliers(
 
     valid_methods = {"auto", "iqr", "zscore", "mad"}
     if outlier_method not in valid_methods:
-        raise ValueError(
-            f"outlier_method must be one of {valid_methods}."
-        )
+        raise ValueError(f"outlier_method must be one of {valid_methods}.")
 
     results = []
 
@@ -162,7 +159,6 @@ def check_na_outliers(
             row["na_risk"] = na_risk
             row["outlier_risk"] = outlier_risk
 
-
         # Output Suggestions
         if return_suggestions:
             suggestions = []
@@ -171,9 +167,7 @@ def check_na_outliers(
                 suggestions.append("Consider imputation or dropping this column.")
 
             if pd.notna(outlier_prop) and outlier_prop >= outlier_threshold:
-                suggestions.append(
-                    "Investigate outliers or consider transformation."
-                )
+                suggestions.append("Investigate outliers or consider transformation.")
 
             row["suggestions"] = "; ".join(suggestions) if suggestions else "None"
 
