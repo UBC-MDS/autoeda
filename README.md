@@ -1,7 +1,7 @@
 # Welcome to AutoEDA
 
 |  |  |
-|------------------------------------|------------------------------------|
+|----|----|
 | Package | [![Latest PyPI Version](https://img.shields.io/pypi/v/autoeda.svg)](https://pypi.org/project/autoeda/) [![Supported Python Versions](https://img.shields.io/pypi/pyversions/autoeda.svg)](https://pypi.org/project/autoeda/) |
 | Meta | [![Code of Conduct](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](CODE_OF_CONDUCT.md) |
 
@@ -111,8 +111,7 @@ pytest
 
 ## Documentation
 
-For detailed usage instructions, examples, and references, please visit the [AutoEDA documentation website](https://ubc-mds.github.io/autoeda/).
-The site provides step by step guides and practical examples to help you get the most out of the package.
+For detailed usage instructions, examples, and references, please visit the [AutoEDA documentation website](https://ubc-mds.github.io/autoeda/). The site provides step by step guides and practical examples to help you get the most out of the package.
 
 ## Contributors
 
