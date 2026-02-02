@@ -1,0 +1,35 @@
+# Function reference {.doc .doc-index}
+
+## Summary statistics
+
+Functions to perform automated exploratory data analysis.
+
+| | |
+| --- | --- |
+| [get_summary_df](get_summary_df.qmd#autoeda.get_summary_df) | Functions to support automated exploratory data analysis (EDA) |
+
+## Data inspection
+
+Functions to inspect data for common issues.
+
+| | |
+| --- | --- |
+| [get_unary](get_unary.qmd#autoeda.inspect.get_unary) | Returns a list of columns with a single value with a relative |
+| [get_high_cardinality](get_high_cardinality.qmd#autoeda.inspect.get_high_cardinality) | Identify columns with high cardinality. |
+
+## Missing data and outliers
+
+Function to check amount of missing data in a DataFrame.
+
+| | |
+| --- | --- |
+| [check_na_outliers](check_na_outliers.qmd#autoeda.check_na_outlier.check_na_outliers) | Diagnose missing values and outliers in a DataFrame. |
+
+## Data plotting
+
+Functions to create common plots for exploratory data analysis.
+
+| | |
+| --- | --- |
+| [plot_correlation_heatmap](plot_correlation_heatmap.qmd#autoeda.plot.plot_correlation_heatmap) | Generate a correlation heatmap for numeric features in a dataset. |
+| [plot_histograms_by_target](plot_histograms_by_target.qmd#autoeda.plot.plot_histograms_by_target) | Plot histograms of features grouped by a target variable. |
