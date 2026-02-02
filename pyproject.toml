@@ -57,6 +57,7 @@ Download = "https://pypi.org/project/autoeda/#files"
 dev = [
     "hatch",
     "pre-commit",
+    "flake8>=6.0"
 ]
 
 docs = [
