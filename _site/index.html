@@ -147,10 +147,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <section id="welcome-to-autoedas-documentation" class="level1">
-<h1>Welcome to AutoEDA’s Documentation ’</h1>
-</section>
-<section id="welcome-to-autoeda" class="level1">
-<h1>Welcome to AutoEDA</h1>
+<h1>Welcome to AutoEDA’s Documentation</h1>
 <p><strong>autoeda</strong> is a Python package for automated exploratory data analysis (EDA). It provides simple, reusable functions to inspect datasets, summarize variables, and generate quick diagnostics for tabular data.</p>
 <section id="installation" class="level2">
 <h2 class="anchored" data-anchor-id="installation">Installation</h2>
@@ -178,34 +175,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Summary statistics for numerical and categorical variables</li>
 <li>Quick diagnostics for tabular datasets</li>
 </ul>
-<div class="{toctree}">
-<p>:maxdepth: 2 :hidden: :caption: Contents:</p>
-<p>Home <self></self></p>
-</div>
-<p>This is the landing page of your docs. you can update it as you’d like to. This documentation example uses myst markdown as the primary documentation syntax.</p>
-<p>```kftmoftlxkedg https://www.pyopensci.org/python-package-guide/documentation/hosting-tools/myst-markdown-rst-doc-syntax.html :color: primary :class: sd-rounded-pill float-left</p>
-<p>Learn more about myst in our pyOpenSci packaging guide.</p>
-<pre><code>
-Myst is a version of markdown that has more formatting flexibility. This
-is what a sphinx directive looks like using myst markdown formatting:
-
-## Core Functions
-
-### `inspect_df(df)`
-
-Inspects a pandas DataFrame and returns a concise overview including:
-
-- Column data types
-- Missing value counts
-- Basic summary statistics
-
-**Example:**
-
-```python
-
-from autoeda.inspect import inspect_df
-
-inspect_df(df)</code></pre>
+</section>
+<section id="core-functions" class="level2">
+<h2 class="anchored" data-anchor-id="core-functions">Core Functions</h2>
+<section id="inspect_dfdf" class="level3">
+<h3 class="anchored" data-anchor-id="inspect_dfdf"><code>inspect_df(df)</code></h3>
+<p>Inspects a pandas DataFrame and returns a concise overview including:</p>
+<ul>
+<li>Column data types</li>
+<li>Missing value counts</li>
+<li>Basic summary statistics</li>
+</ul>
+<p><strong>Example:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> autoeda.inspect <span class="im">import</span> inspect_df</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>inspect_df(df)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
 <section id="get_unarydf-threshold0.75-dropnafalse" class="level3">
 <h3 class="anchored" data-anchor-id="get_unarydf-threshold0.75-dropnafalse"><code>get_unary(df, threshold=0.75, dropna=False)</code></h3>
 <p>Identifies columns that are dominated by a single value, which may indicate low-information or near-constant features.</p>
@@ -264,10 +250,6 @@ inspect_df(df)</code></pre>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> autoeda.inspect <span class="im">import</span> plot_correlation_heatmap</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>plot_correlation_heatmap(df)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="{toctree}">
-<p>:maxdepth: 2 :caption: Contents:</p>
-</div>
-<pre class="text"><code>If you see syntax like the syntax below, you are looking at rst.</code></pre>
 </section>
 </section>
 <section id="copyright" class="level2">

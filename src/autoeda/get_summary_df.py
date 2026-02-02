@@ -1,7 +1,3 @@
-"""
-Functions to support automated exploratory data analysis (EDA)
-"""
-
 import pandas as pd
 import numpy as np
 
@@ -11,29 +7,25 @@ def get_summary_df(df, categorical_columns, numerical_columns):
     Returns a summary dataframe with the main statistics, datatypes,
     counts/missing values for numerical and categorical columns.
 
-    For categorical columns, the summary includes:
-    - Data types
-    - Number of non-null values
-    - Count of missing values
-    - Most common value/category
+    Parameters
+    ----------
+    df : pandas.DataFrame
+        Input dataset for exploratory data analysis.
+    categorical_columns : list of str
+        Names of columns treated as categorical variables.
+    numerical_columns : list of str
+        Names of columns treated as numerical variables.
 
-    For numerical columns, the summary includes:
-    - Data types
-    - Count of non-null values
-    - Count of missing values
-    - Mean
-    - Standard deviation
-    - Minimum value
-    - Maximum value
-
-    Parameters:
-    df: Pandas DataFrame.
-    categorical_columns: names of the columns with categorical data.
-    numerical_columns: names of the columns with numerical data.
-
-    Returns:
-    categorical_df: summary dataframe for categorical columns.
-    numerical_df: summary dataframe for numerical columns.
+    Returns
+    -------
+    categorical_df : pandas.DataFrame
+        Summary dataframe for categorical columns, including:
+        data types, non-null counts, missing values, and
+        most frequent category.
+    numerical_df : pandas.DataFrame
+        Summary dataframe for numerical columns, including:
+        data types, non-null counts, missing values,
+        mean, standard deviation, minimum, and maximum values.
     """
     categorical_df = pd.DataFrame()
     numerical_df = pd.DataFrame()

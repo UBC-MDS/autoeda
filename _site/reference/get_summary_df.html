@@ -252,7 +252,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="autoeda.get_summary_df" class="level1">
 <h1>get_summary_df</h1>
 <p><code>get_summary_df</code></p>
-<p>Functions to support automated exploratory data analysis (EDA)</p>
 <section id="functions" class="level2">
 <h2 class="anchored" data-anchor-id="functions">Functions</h2>
 <table class="caption-top table">
@@ -273,12 +272,76 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="autoeda.get_summary_df.get_summary_df">get_summary_df</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>get_summary_df.get_summary_df(df, categorical_columns, numerical_columns)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Returns a summary dataframe with the main statistics, datatypes, counts/missing values for numerical and categorical columns.</p>
-<p>For categorical columns, the summary includes: - Data types - Number of non-null values - Count of missing values - Most common value/category</p>
-<p>For numerical columns, the summary includes: - Data types - Count of non-null values - Count of missing values - Mean - Standard deviation - Minimum value - Maximum value</p>
-<p>Parameters: df: Pandas DataFrame. categorical_columns: names of the columns with categorical data. numerical_columns: names of the columns with numerical data.</p>
-<p>Returns: categorical_df: summary dataframe for categorical columns. numerical_df: summary dataframe for numerical columns.</p>
+<section id="parameters" class="level4 doc-section doc-section-parameters">
+<h4 class="doc-section doc-section-parameters anchored" data-anchor-id="parameters">Parameters</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 17%">
+<col style="width: 50%">
+<col style="width: 11%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>df</td>
+<td>pandas.DataFrame</td>
+<td>Input dataset for exploratory data analysis.</td>
+<td><em>required</em></td>
+</tr>
+<tr class="even">
+<td>categorical_columns</td>
+<td>list of str</td>
+<td>Names of columns treated as categorical variables.</td>
+<td><em>required</em></td>
+</tr>
+<tr class="odd">
+<td>numerical_columns</td>
+<td>list of str</td>
+<td>Names of columns treated as numerical variables.</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="returns" class="level4 doc-section doc-section-returns">
+<h4 class="doc-section doc-section-returns anchored" data-anchor-id="returns">Returns</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 8%">
+<col style="width: 9%">
+<col style="width: 81%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>categorical_df</td>
+<td>pandas.DataFrame</td>
+<td>Summary dataframe for categorical columns, including: data types, non-null counts, missing values, and most frequent category.</td>
+</tr>
+<tr class="even">
+<td>numerical_df</td>
+<td>pandas.DataFrame</td>
+<td>Summary dataframe for numerical columns, including: data types, non-null counts, missing values, mean, standard deviation, minimum, and maximum values.</td>
+</tr>
+</tbody>
+</table>
 
 
+</section>
 </section>
 </section>
 </section>

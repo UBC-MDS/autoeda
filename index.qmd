@@ -4,9 +4,7 @@ editor:
     wrap: 72
 ---
 
-# Welcome to AutoEDA's Documentation '
-
-# Welcome to AutoEDA
+# Welcome to AutoEDA's Documentation
 
 **autoeda** is a Python package for automated exploratory data analysis
 (EDA). It provides simple, reusable functions to inspect datasets,
