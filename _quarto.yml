@@ -5,14 +5,27 @@ metadata-files:
   - reference/_sidebar.yml
 
 website:
-  navbar:
+   navbar:
     background: primary
     search: true
     left:
       - text: "Home"
-        href: index.qmd
+        href: docs/index.qmd
       - text: "Documentation"
         href: reference/index.qmd
+
+
+   sidebar:
+    contents:
+      - text: Home
+        file: docs/index.qmd
+      - text: API Reference
+        file: reference/index.qmd
+      - text: Contributing
+        file: docs/contributing.qmd
+      - text: License
+        file: docs/license.qmd
+
 
 format:
   html:
