@@ -73,7 +73,7 @@ jobs:
       # This creates a clickable link in the PR to view the deployed preview
       - name: Update deployment status
         uses: bobheadxi/deployments@v1
-        if: ${{ always() && steps.deployment.outputs.deployment_id != '' }}
+        if: always()
         with:
           step: finish
           token: ${{ secrets.GITHUB_TOKEN }}
