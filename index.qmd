@@ -10,12 +10,24 @@ editor:
 (EDA). It provides simple, reusable functions to inspect datasets,
 summarize variables, and generate quick diagnostics for tabular data.
 
-## Installation
+## Installations
 
 Install the package using pip:
 
 ``` bash
 pip install autoeda
+```
+
+### Development Installation 
+
+To install the development version:
+
+```{bash}
+git clone https://github.com/UBC-MDS/autoeda.git
+cd autoeda
+conda env create -f environment.yml
+conda activate autoeda-dev
+pip install -e .
 ```
 
 ## Quick Start
