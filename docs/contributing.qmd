@@ -10,4 +10,4 @@ We welcome contributions to **AutoEDA**, including bug reports, feature requests
 
 For full contribution guidelines, see:
 
-https://github.com/UBC-MDS/autoeda/blob/main/CONTRIBUTING.md
+<https://github.com/UBC-MDS/autoeda/blob/develop/CONTRIBUTING.md>
