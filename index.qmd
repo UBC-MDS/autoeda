@@ -222,6 +222,12 @@ get_summary_df(df)
 check_na_outliers(df)
 ```
 
+## Learn More
+
+-   [API Reference](reference/index.qmd)
+-   [Contributing Guide](contributing.qmd)
+-   [License](license.qmd)
+
 ## Copyright
 
 -   Copyright © 2026 Eli Gonzalez, Gurleen Kaur, Gloria Yi, Mantram
