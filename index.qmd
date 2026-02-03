@@ -199,4 +199,4 @@ plot_correlation_heatmap(df)
 
 -   Copyright © 2026 Eli Gonzalez, Gurleen Kaur, Gloria Yi, Mantram
     Sharma.
--   Free software distributed under the MIT License.
+-   This project is free software distributed under the MIT License.
