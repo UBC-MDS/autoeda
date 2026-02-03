@@ -2,13 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.23">
+<meta name="generator" content="quarto-1.8.27">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>code_of_conduct</title>
-<title>code_of_conduct</title>
+<title>plot_histograms_by_target</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,27 +20,62 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-1fe81d0376b2c50856e68e651e390326.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-0fd445826db4cc1007072b2af7a3b60c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-0fd445826db4cc1007072b2af7a3b60c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -71,20 +105,15 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="reference/_styles-quartodoc.css">
-<link rel="stylesheet" href="reference/_styles-quartodoc.css">
+<link rel="stylesheet" href="../reference/_styles-quartodoc.css">
 </head>
 
-<body class="nav-fixed fullcontent quarto-light">
+<body class="nav-sidebar floating nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    </a>
-  </div>
             <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
@@ -92,12 +121,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.qmd" aria-current="page"> 
+    <a class="nav-link active" href="../docs/index.html" aria-current="page"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./reference/index.html"> 
-    <a class="nav-link" href="./reference/index.html"> 
+    <a class="nav-link" href="../reference/index.html"> 
 <span class="menu-text">Documentation</span></a>
   </li>  
 </ul>
@@ -121,33 +149,29 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
-      <a href="./index.html" class="sidebar-logo-link">
-      </a>
-      </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.qmd" class="sidebar-item-text sidebar-link">
+  <a href="../docs/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Home</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./reference/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../reference/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">API Reference</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./contributing.qmd" class="sidebar-item-text sidebar-link">
+  <a href="../docs/contributing.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Contributing</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./license.qmd" class="sidebar-item-text sidebar-link">
+  <a href="../docs/license.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">License</span></a>
   </div>
 </li>
@@ -163,150 +187,91 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="contributor-covenant-code-of-conduct" class="level1">
-<h1>Contributor Covenant Code of Conduct</h1>
-<p>Eli Gonzalez, Gurleen Kaur, Gloria Yi, Mantram Sharma</p>
-<section id="our-pledge" class="level2">
-<h2 class="anchored" data-anchor-id="our-pledge">Our Pledge</h2>
-<p>We pledge to make our community welcoming, safe, and equitable for all.</p>
-<p>We are committed to fostering an environment that is respecting and promoting the dignity, rights, and contributions of all individuals, regardless of race, ethnicity, caste, color, age, physical characteristics, neurodiversity, disability, sex, gender identity or expression, sexual orientation, language, philosophy or religion, national or social origin, socio-economic position, other characteristics.</p>
-<p>We extend the privilege of participation to all members of our community, including contributors, maintainers, moderators, and organizers.</p>
+<section id="autoeda.plot.plot_histograms_by_target" class="level1">
+<h1>plot_histograms_by_target</h1>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>plot.plot_histograms_by_target(</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    df,</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    target,</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    features<span class="op">=</span><span class="va">None</span>,</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    bins<span class="op">=</span><span class="dv">30</span>,</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">8</span>),</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Plot histograms of features grouped by a target variable.</p>
+<p>This function visualizes the distribution of selected features conditioned on the target variable. This is useful for understanding class separation and feature behavior.</p>
+<section id="parameters" class="level2 doc-section doc-section-parameters">
+<h2 class="doc-section doc-section-parameters anchored" data-anchor-id="parameters">Parameters</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 7%">
+<col style="width: 12%">
+<col style="width: 71%">
+<col style="width: 8%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>df</td>
+<td>pandas.DataFrame</td>
+<td>Input dataframe containing features and target.</td>
+<td><em>required</em></td>
+</tr>
+<tr class="even">
+<td>target</td>
+<td>str</td>
+<td>Name of the target column.</td>
+<td><em>required</em></td>
+</tr>
+<tr class="odd">
+<td>features</td>
+<td>list of str</td>
+<td>List of feature column names to plot. If None, all numeric columns except the target will be used.</td>
+<td><code>None</code></td>
+</tr>
+<tr class="even">
+<td>bins</td>
+<td>int</td>
+<td>Number of bins for the histograms.</td>
+<td><code>30</code></td>
+</tr>
+<tr class="odd">
+<td>figsize</td>
+<td>tuple</td>
+<td>Size of the figure.</td>
+<td><code>(12, 8)</code></td>
+</tr>
+</tbody>
+</table>
 </section>
-<section id="our-standards" class="level2">
-<h2 class="anchored" data-anchor-id="our-standards">Our Standards</h2>
-<p>Examples of behaviours that contribute to a positive environment:</p>
-<ol type="1">
-<li>Respecting the community and diverse perspectives and experiences.</li>
-<li>Engaging with empathy and kindness towards all.</li>
-<li>Accounability for our actions and contributions.</li>
-<li>Providing constructive feedback with grace.</li>
-<li>Supporting the well-being and growth of the community.</li>
-</ol>
-<p>Examples of unacceptable behaviours by participants:</p>
-<ol type="1">
-<li>Violating boundaries of another participant.</li>
-<li>Personal comments on an individual or group’s appearance, identity, or personal characteristics.</li>
-<li>Communication that is sexually suggestive or inappropriately intimate.</li>
-<li>Using or sharing information about others without their knowing and permission.</li>
-<li>Engaging in acts of violence or harassment towards anyone.</li>
-</ol>
-</section>
-<section id="enforcement" class="level2">
-<h2 class="anchored" data-anchor-id="enforcement">Enforcement</h2>
-<p>In the instance that one violates the Code of Conduct, please email sharma.mantram@gmail.com. Appropriate and fair measures will be taken by the Community Moderators to handle this immediately.</p>
-<p>Community Moderators will be responsible for making judgments on whether a violation has occured and communication will be directly with the involved parties.</p>
-</section>
-<section id="enforcement-guidelines" class="level2">
-<h2 class="anchored" data-anchor-id="enforcement-guidelines">Enforcement Guidelines</h2>
-<p>Community Moderators will follow these guidelines when addressing actions that violate this code of conduct.</p>
-<ol type="1">
-<li>Correction
-<ol type="1">
-<li>Event: Use of derogatory language, signs or inappropriate behaviour.</li>
-<li>Consequence: A private conversation to address the violation and discuss corrections.</li>
-</ol></li>
-<li>Warning
-<ol type="1">
-<li>Event: A single incident or series of incidents.</li>
-<li>Consequence: A written warning outlining the behaviour, its impact and next steps if continues.</li>
-</ol></li>
-<li>Temporary Ban
-<ol type="1">
-<li>Event: Repeated violations which have been addressed before or a single serious violation.</li>
-<li>Consequence: A written notice explaining the duration of the temporary ban and expectations for returning to the community.</li>
-</ol></li>
-<li>Permanent Ban
-<ol type="1">
-<li>Event: Ongoing or severe violations that compromise community safety or well-being.</li>
-<li>Consequence: A written notice and permanent removal of access from all related community spaces.</li>
-</ol></li>
-</ol>
-</section>
-<section id="scope" class="level2">
-<h2 class="anchored" data-anchor-id="scope">Scope</h2>
-<p>This Code of Conduct applies to all community spaces and participation. It also applies beyond this space to when an individual represents the community elsewhere. This could be anything from using the official email addresses, posting from a official social media, or participating in events as a designated representative.</p>
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
-
-
-
-
-<section id="contributor-covenant-code-of-conduct" class="level1">
-<h1>Contributor Covenant Code of Conduct</h1>
-<p>Eli Gonzalez, Gurleen Kaur, Gloria Yi, Mantram Sharma</p>
-<section id="our-pledge" class="level2">
-<h2 class="anchored" data-anchor-id="our-pledge">Our Pledge</h2>
-<p>We pledge to make our community welcoming, safe, and equitable for all.</p>
-<p>We are committed to fostering an environment that is respecting and promoting the dignity, rights, and contributions of all individuals, regardless of race, ethnicity, caste, color, age, physical characteristics, neurodiversity, disability, sex, gender identity or expression, sexual orientation, language, philosophy or religion, national or social origin, socio-economic position, other characteristics.</p>
-<p>We extend the privilege of participation to all members of our community, including contributors, maintainers, moderators, and organizers.</p>
-</section>
-<section id="our-standards" class="level2">
-<h2 class="anchored" data-anchor-id="our-standards">Our Standards</h2>
-<p>Examples of behaviours that contribute to a positive environment:</p>
-<ol type="1">
-<li>Respecting the community and diverse perspectives and experiences.</li>
-<li>Engaging with empathy and kindness towards all.</li>
-<li>Accounability for our actions and contributions.</li>
-<li>Providing constructive feedback with grace.</li>
-<li>Supporting the well-being and growth of the community.</li>
-</ol>
-<p>Examples of unacceptable behaviours by participants:</p>
-<ol type="1">
-<li>Violating boundaries of another participant.</li>
-<li>Personal comments on an individual or group’s appearance, identity, or personal characteristics.</li>
-<li>Communication that is sexually suggestive or inappropriately intimate.</li>
-<li>Using or sharing information about others without their knowing and permission.</li>
-<li>Engaging in acts of violence or harassment towards anyone.</li>
-</ol>
-</section>
-<section id="enforcement" class="level2">
-<h2 class="anchored" data-anchor-id="enforcement">Enforcement</h2>
-<p>In the instance that one violates the Code of Conduct, please email sharma.mantram@gmail.com. Appropriate and fair measures will be taken by the Community Moderators to handle this immediately.</p>
-<p>Community Moderators will be responsible for making judgments on whether a violation has occured and communication will be directly with the involved parties.</p>
-</section>
-<section id="enforcement-guidelines" class="level2">
-<h2 class="anchored" data-anchor-id="enforcement-guidelines">Enforcement Guidelines</h2>
-<p>Community Moderators will follow these guidelines when addressing actions that violate this code of conduct.</p>
-<ol type="1">
-<li>Correction
-<ol type="1">
-<li>Event: Use of derogatory language, signs or inappropriate behaviour.</li>
-<li>Consequence: A private conversation to address the violation and discuss corrections.</li>
-</ol></li>
-<li>Warning
-<ol type="1">
-<li>Event: A single incident or series of incidents.</li>
-<li>Consequence: A written warning outlining the behaviour, its impact and next steps if continues.</li>
-</ol></li>
-<li>Temporary Ban
-<ol type="1">
-<li>Event: Repeated violations which have been addressed before or a single serious violation.</li>
-<li>Consequence: A written notice explaining the duration of the temporary ban and expectations for returning to the community.</li>
-</ol></li>
-<li>Permanent Ban
-<ol type="1">
-<li>Event: Ongoing or severe violations that compromise community safety or well-being.</li>
-<li>Consequence: A written notice and permanent removal of access from all related community spaces.</li>
-</ol></li>
-</ol>
-</section>
-<section id="scope" class="level2">
-<h2 class="anchored" data-anchor-id="scope">Scope</h2>
-<p>This Code of Conduct applies to all community spaces and participation. It also applies beyond this space to when an individual represents the community elsewhere. This could be anything from using the official email addresses, posting from a official social media, or participating in events as a designated representative.</p>
-</section>
-<section id="attribution" class="level2">
-<h2 class="anchored" data-anchor-id="attribution">Attribution</h2>
-<p>This Code of Conduct is adapted from the Contributor Covenant, version 3.0, permanently available at <a href="https://www.contributor-covenant.org/version/3/0/">https://www.contributor-covenant.org/version/3/0/</a>.</p>
-<p>Contributor Covenant is stewarded by the Organization for Ethical Source and licensed under CC BY-SA 4.0. To view a copy of this license, visit <a href="https://creativecommons.org/licenses/by-sa/4.0/">https://creativecommons.org/licenses/by-sa/4.0/</a></p>
-<p>This Code of Conduct is inspired from the work of <a href="https://github.com/skysheng7/AI_bias_in_farming/blob/main/CODE_OF_CONDUCT.md">Sky Sheng</a>.</p>
-<p>This Code of Conduct is adapted from the work of <a href="https://github.com/sjbalagit/Heart-Disease-Predictor---Group16/blob/main/CODE_OF_CONDUCT.md">Heart-Disease-Predictor—Group16</a></p>
-<p>For answers to common questions about Contributor Covenant, see the FAQ at <a href="https://www.contributor-covenant.org/faq">https://www.contributor-covenant.org/faq</a>. Translations are provided at <a href="https://www.contributor-covenant.org/translations">https://www.contributor-covenant.org/translations</a>. Additional enforcement and community guideline resources can be found at <a href="https://www.contributor-covenant.org/resources">https://www.contributor-covenant.org/resources</a>. The enforcement ladder was inspired by the work of <a href="https://github.com/mozilla/inclusion">Mozilla’s code of conduct team</a>.</p>
-<section id="attribution" class="level2">
-<h2 class="anchored" data-anchor-id="attribution">Attribution</h2>
-<p>This Code of Conduct is adapted from the Contributor Covenant, version 3.0, permanently available at <a href="https://www.contributor-covenant.org/version/3/0/">https://www.contributor-covenant.org/version/3/0/</a>.</p>
-<p>Contributor Covenant is stewarded by the Organization for Ethical Source and licensed under CC BY-SA 4.0. To view a copy of this license, visit <a href="https://creativecommons.org/licenses/by-sa/4.0/">https://creativecommons.org/licenses/by-sa/4.0/</a></p>
-<p>This Code of Conduct is inspired from the work of <a href="https://github.com/skysheng7/AI_bias_in_farming/blob/main/CODE_OF_CONDUCT.md">Sky Sheng</a>.</p>
-<p>This Code of Conduct is adapted from the work of <a href="https://github.com/sjbalagit/Heart-Disease-Predictor---Group16/blob/main/CODE_OF_CONDUCT.md">Heart-Disease-Predictor—Group16</a></p>
-<p>For answers to common questions about Contributor Covenant, see the FAQ at <a href="https://www.contributor-covenant.org/faq">https://www.contributor-covenant.org/faq</a>. Translations are provided at <a href="https://www.contributor-covenant.org/translations">https://www.contributor-covenant.org/translations</a>. Additional enforcement and community guideline resources can be found at <a href="https://www.contributor-covenant.org/resources">https://www.contributor-covenant.org/resources</a>. The enforcement ladder was inspired by the work of <a href="https://github.com/mozilla/inclusion">Mozilla’s code of conduct team</a>.</p>
+<section id="returns" class="level2 doc-section doc-section-returns">
+<h2 class="doc-section doc-section-returns anchored" data-anchor-id="returns">Returns</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 10%">
+<col style="width: 34%">
+<col style="width: 55%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td></td>
+<td>matplotlib.figure.Figure</td>
+<td>Figure object containing the histograms.</td>
+</tr>
+</tbody>
+</table>
 
 
 </section>

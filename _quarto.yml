@@ -10,7 +10,7 @@ website:
     search: true
     left:
       - text: "Home"
-        href: index.qmd
+        href: docs/index.qmd
       - text: "Documentation"
         href: reference/index.qmd
 
@@ -18,13 +18,13 @@ website:
    sidebar:
     contents:
       - text: Home
-        file: index.qmd
+        file: docs/index.qmd
       - text: API Reference
         file: reference/index.qmd
       - text: Contributing
-        file: contributing.qmd
+        file: docs/contributing.qmd
       - text: License
-        file: license.qmd
+        file: docs/license.qmd
 
 
 format:

@@ -22,7 +22,7 @@ pip install autoeda
 
 To install the development version:
 
-```{bash}
+``` bash
 git clone https://github.com/UBC-MDS/autoeda.git
 cd autoeda
 conda env create -f environment.yml
@@ -199,7 +199,7 @@ plot_correlation_heatmap(df)
 
 Below is a complete example using Autoeda workflow on a small dataset
 
-```{python}
+``` pythons
 import pandas as pd
 from autoeda.inspect import (
     inspect_df,
@@ -221,12 +221,6 @@ get_high_cardinality(df)
 get_summary_df(df)
 check_na_outliers(df)
 ```
-
-## Learn More
-
--   [API Reference](reference/index.qmd)
--   [Contributing Guide](contributing.qmd)
--   [License](license.qmd)
 
 ## Copyright
 
