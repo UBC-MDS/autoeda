@@ -11,17 +11,24 @@ def get_unary(df, target=None, threshold=0.75, dropna=False):
     frequency percentage over a threshold (75% as default).
     In case user want only unary columns then threshold should be set to 1.
 
-    Parameters:
-    -----------
-    df: pandas dataframe to analyze.
-    threshold: If the relative frequency of the value with the highest counting
-    is over this threshold then column is selected. Default is 0.75.
-    dropna: If considering or not null values as a value in frequencies.
-    Default is False.
-
-    Returns:
+    Parameters
     ----------
-    unary_cols: list of unary columns.
+    df : pandas.DataFrame
+        Input DataFrame to analyze.
+
+    threshold : float, default=0.75
+        Proportion threshold above which a column is considered unary.
+        If set to 1.0, only columns with a single unique value
+        are returned.
+
+    dropna : bool, default=False
+        Whether to exclude missing values (NaN) when computing value
+        frequencies.
+
+    Returns
+    -------
+    unary_cols : list of str
+        List of column names identified as unary.
     """
     if not isinstance(df, pd.DataFrame):
         raise TypeError("df must be a pandas DataFrame")

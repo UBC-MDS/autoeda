@@ -2,7 +2,7 @@
 
 `get_summary_df`
 
-Functions to support automated exploratory data analysis (EDA)
+
 
 ## Functions
 
@@ -19,26 +19,17 @@ get_summary_df.get_summary_df(df, categorical_columns, numerical_columns)
 Returns a summary dataframe with the main statistics, datatypes,
 counts/missing values for numerical and categorical columns.
 
-For categorical columns, the summary includes:
-- Data types
-- Number of non-null values
-- Count of missing values
-- Most common value/category
+#### Parameters {.doc-section .doc-section-parameters}
 
-For numerical columns, the summary includes:
-- Data types
-- Count of non-null values
-- Count of missing values
-- Mean
-- Standard deviation
-- Minimum value
-- Maximum value
+| Name                | Type             | Description                                        | Default    |
+|---------------------|------------------|----------------------------------------------------|------------|
+| df                  | pandas.DataFrame | Input dataset for exploratory data analysis.       | _required_ |
+| categorical_columns | list of str      | Names of columns treated as categorical variables. | _required_ |
+| numerical_columns   | list of str      | Names of columns treated as numerical variables.   | _required_ |
 
-Parameters:
-df: Pandas DataFrame.
-categorical_columns: names of the columns with categorical data.
-numerical_columns: names of the columns with numerical data.
+#### Returns {.doc-section .doc-section-returns}
 
-Returns:
-categorical_df: summary dataframe for categorical columns.
-numerical_df: summary dataframe for numerical columns.
+| Name           | Type             | Description                                                                                                                                             |
+|----------------|------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
+| categorical_df | pandas.DataFrame | Summary dataframe for categorical columns, including: data types, non-null counts, missing values, and most frequent category.                          |
+| numerical_df   | pandas.DataFrame | Summary dataframe for numerical columns, including: data types, non-null counts, missing values, mean, standard deviation, minimum, and maximum values. |

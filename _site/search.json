@@ -4,7 +4,7 @@
     "href": "reference/index.html",
     "title": "Function reference",
     "section": "",
-    "text": "Functions to perform automated exploratory data analysis.\n\n\n\nget_summary_df\nFunctions to support automated exploratory data analysis (EDA)\n\n\n\n\n\n\nFunctions to inspect data for common issues.\n\n\n\nget_unary\nReturns a list of columns with a single value with a relative\n\n\nget_high_cardinality\nIdentify columns with high cardinality.\n\n\n\n\n\n\nFunction to check amount of missing data in a DataFrame.\n\n\n\ncheck_na_outliers\nDiagnose missing values and outliers in a DataFrame.\n\n\n\n\n\n\nFunctions to create common plots for exploratory data analysis.\n\n\n\nplot_correlation_heatmap\nGenerate a correlation heatmap for numeric features in a dataset.\n\n\nplot_histograms_by_target\nPlot histograms of features grouped by a target variable.",
+    "text": "Functions to perform automated exploratory data analysis.\n\n\n\nget_summary_df\n\n\n\n\n\n\n\nFunctions to inspect data for common issues.\n\n\n\nget_unary\nReturns a list of columns with a single value with a relative\n\n\nget_high_cardinality\nIdentify columns with high cardinality.\n\n\n\n\n\n\nFunction to check amount of missing data in a DataFrame.\n\n\n\ncheck_na_outliers\nDiagnose missing values and outliers in a DataFrame.\n\n\n\n\n\n\nFunctions to create common plots for exploratory data analysis.\n\n\n\nplot_correlation_heatmap\nGenerate a correlation heatmap for numeric features in a dataset.\n\n\nplot_histograms_by_target\nPlot histograms of features grouped by a target variable.",
     "crumbs": [
       "Documentation",
       "Function reference"
@@ -15,7 +15,7 @@
     "href": "reference/index.html#summary-statistics",
     "title": "Function reference",
     "section": "",
-    "text": "Functions to perform automated exploratory data analysis.\n\n\n\nget_summary_df\nFunctions to support automated exploratory data analysis (EDA)",
+    "text": "Functions to perform automated exploratory data analysis.\n\n\n\nget_summary_df",
     "crumbs": [
       "Documentation",
       "Function reference"
@@ -95,7 +95,7 @@
     "href": "reference/get_unary.html",
     "title": "get_unary",
     "section": "",
-    "text": "inspect.get_unary(df, target=None, threshold=0.75, dropna=False)\nReturns a list of columns with a single value with a relative frequency percentage over a threshold (75% as default). In case user want only unary columns then threshold should be set to 1.\n\n\ndf: pandas dataframe to analyze. threshold: If the relative frequency of the value with the highest counting is over this threshold then column is selected. Default is 0.75. dropna: If considering or not null values as a value in frequencies. Default is False.\n\n\n\nunary_cols: list of unary columns.",
+    "text": "inspect.get_unary(df, target=None, threshold=0.75, dropna=False)\nReturns a list of columns with a single value with a relative frequency percentage over a threshold (75% as default). In case user want only unary columns then threshold should be set to 1.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\ndf\npandas.DataFrame\nInput DataFrame to analyze.\nrequired\n\n\nthreshold\nfloat\nProportion threshold above which a column is considered unary. If set to 1.0, only columns with a single unique value are returned.\n0.75\n\n\ndropna\nbool\nWhether to exclude missing values (NaN) when computing value frequencies.\nFalse\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\nunary_cols\nlist of str\nList of column names identified as unary.",
     "crumbs": [
       "Documentation",
       "Data inspection",
@@ -107,7 +107,7 @@
     "href": "reference/get_unary.html#parameters",
     "title": "get_unary",
     "section": "",
-    "text": "df: pandas dataframe to analyze. threshold: If the relative frequency of the value with the highest counting is over this threshold then column is selected. Default is 0.75. dropna: If considering or not null values as a value in frequencies. Default is False.",
+    "text": "Name\nType\nDescription\nDefault\n\n\n\n\ndf\npandas.DataFrame\nInput DataFrame to analyze.\nrequired\n\n\nthreshold\nfloat\nProportion threshold above which a column is considered unary. If set to 1.0, only columns with a single unique value are returned.\n0.75\n\n\ndropna\nbool\nWhether to exclude missing values (NaN) when computing value frequencies.\nFalse",
     "crumbs": [
       "Documentation",
       "Data inspection",
@@ -119,7 +119,7 @@
     "href": "reference/get_unary.html#returns",
     "title": "get_unary",
     "section": "",
-    "text": "unary_cols: list of unary columns.",
+    "text": "Name\nType\nDescription\n\n\n\n\nunary_cols\nlist of str\nList of column names identified as unary.",
     "crumbs": [
       "Documentation",
       "Data inspection",
@@ -275,32 +275,46 @@
     "text": "This Code of Conduct is adapted from the Contributor Covenant, version 3.0, permanently available at https://www.contributor-covenant.org/version/3/0/.\nContributor Covenant is stewarded by the Organization for Ethical Source and licensed under CC BY-SA 4.0. To view a copy of this license, visit https://creativecommons.org/licenses/by-sa/4.0/\nThis Code of Conduct is inspired from the work of Sky Sheng.\nThis Code of Conduct is adapted from the work of Heart-Disease-Predictor—Group16\nFor answers to common questions about Contributor Covenant, see the FAQ at https://www.contributor-covenant.org/faq. Translations are provided at https://www.contributor-covenant.org/translations. Additional enforcement and community guideline resources can be found at https://www.contributor-covenant.org/resources. The enforcement ladder was inspired by the work of Mozilla’s code of conduct team."
   },
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome to AutoEDA’s Documentation",
+    "section": "",
+    "text": "autoeda is a Python package for automated exploratory data analysis (EDA). It provides simple, reusable functions to inspect datasets, summarize variables, and generate quick diagnostics for tabular data.\n\n\nInstall the package using pip:\npip install autoeda\n\n\n\nHere is a minimal example showing how to use autoeda on a pandas DataFrame:\nimport pandas as pd\nfrom autoeda.inspect import (\n    inspect_df,\n    get_unary,\n    get_high_cardinality,\n    get_summary_df,\n    check_na_outliers,\n    plot_correlation_heatmap,\n)\n\ndf = pd.DataFrame({\n    \"age\": [23, 45, 31, None, 120],\n    \"income\": [50000, 80000, 62000, None, 1_000_000],\n    \"gender\": [\"F\", \"M\", \"F\", \"F\", \"F\"],\n    \"city\": [\"Vancouver\", \"Toronto\", \"Toronto\", \"Toronto\", \"Toronto\"]\n})\n\n\n\nautoeda currently provides the following functionality:\n\nDataset inspection utilities\nSummary statistics for numerical and categorical variables\nQuick diagnostics for tabular datasets\n\n\n\n\n\n\nInspects a pandas DataFrame and returns a concise overview including:\n\nColumn data types\nMissing value counts\nBasic summary statistics\n\nExample:\n\nfrom autoeda.inspect import inspect_df\n\ninspect_df(df)\n\n\n\nIdentifies columns that are dominated by a single value, which may indicate low-information or near-constant features.\n\nthreshold controls how dominant a value must be to flag a column\ndropna controls whether missing values are ignored\n\nExample:\n\nfrom autoeda.inspect import get_unary\n\nget_unary(df, threshold=0.70)\n\n\n\nIdentifies columns with a high number of unique values relative to the size of the dataset, which may require special encoding or handling.\n\nmax_unique_ratio defines the maximum allowed ratio of unique values\n\nExample:\n\nfrom autoeda.inspect import get_high_cardinality\n\nget_high_cardinality(df, max_unique_ratio=0.5)\n\n\n\nGenerates a summary DataFrame that provides an overview of each column, including data types, counts, missing values, and basic descriptive statistics.\nExample:\n\n from autoeda.inspect import get_summary_df\n\nget_summary_df(df)\n\n\n\nChecks each column for missing values and potential outliers, helping identify data quality issues that may require preprocessing.\n\noutlier_method controls how outliers are detected\n\nExample:\n\nfrom autoeda.inspect import check_na_outliers\n\nquality_report = check_na_outliers(\n    df,\n    outlier_method=\"auto\",\n    na_threshold=0.1,\n    outlier_threshold=0.05,\n    return_risk=True,\n    return_suggestions=True,\nprint(quality_report)\n)\n\n\n\nCreates a correlation heatmap for numerical features in the dataset to help identify relationships between variables. If a target variable is provided, correlations with the target are highlighted.\n\ntarget optionally specifies a target column\nmethod controls the correlation metric used\n\nExample:\n\nfrom autoeda.inspect import plot_correlation_heatmap\n\nplot_correlation_heatmap(df)\n\n\n\n\n\nCopyright © 2026 Eli Gonzalez, Gurleen Kaur, Gloria Yi, Mantram Sharma.\nFree software distributed under the MIT License."
+  },
+  {
     "objectID": "index.html#installation",
     "href": "index.html#installation",
-    "title": "Welcome to AutoEDA’s Documentation ’",
-    "section": "Installation",
-    "text": "Installation\nInstall the package using pip:\npip install autoeda"
+    "title": "Welcome to AutoEDA’s Documentation",
+    "section": "",
+    "text": "Install the package using pip:\npip install autoeda"
   },
   {
     "objectID": "index.html#quick-start",
     "href": "index.html#quick-start",
-    "title": "Welcome to AutoEDA’s Documentation ’",
-    "section": "Quick Start",
-    "text": "Quick Start\nHere is a minimal example showing how to use autoeda on a pandas DataFrame:\nimport pandas as pd\nfrom autoeda.inspect import inspect_df\n\ndf = pd.DataFrame({\n    \"age\": [23, 45, 31],\n    \"income\": [50000, 80000, 62000]\n})\n\ninspect_df(df)"
+    "title": "Welcome to AutoEDA’s Documentation",
+    "section": "",
+    "text": "Here is a minimal example showing how to use autoeda on a pandas DataFrame:\nimport pandas as pd\nfrom autoeda.inspect import (\n    inspect_df,\n    get_unary,\n    get_high_cardinality,\n    get_summary_df,\n    check_na_outliers,\n    plot_correlation_heatmap,\n)\n\ndf = pd.DataFrame({\n    \"age\": [23, 45, 31, None, 120],\n    \"income\": [50000, 80000, 62000, None, 1_000_000],\n    \"gender\": [\"F\", \"M\", \"F\", \"F\", \"F\"],\n    \"city\": [\"Vancouver\", \"Toronto\", \"Toronto\", \"Toronto\", \"Toronto\"]\n})"
   },
   {
     "objectID": "index.html#whats-included",
     "href": "index.html#whats-included",
-    "title": "Welcome to AutoEDA’s Documentation ’",
-    "section": "What’s Included",
-    "text": "What’s Included\nautoeda currently provides the following functionality:\n\nDataset inspection utilities\nSummary statistics for numerical and categorical variables\nQuick diagnostics for tabular datasets\n\n\n:maxdepth: 2 :hidden: :caption: Contents:\nHome \n\nThis is the landing page of your docs. you can update it as you’d like to. This documentation example uses myst markdown as the primary documentation syntax.\n```kftmoftlxkedg https://www.pyopensci.org/python-package-guide/documentation/hosting-tools/myst-markdown-rst-doc-syntax.html :color: primary :class: sd-rounded-pill float-left\nLearn more about myst in our pyOpenSci packaging guide.\n\nMyst is a version of markdown that has more formatting flexibility. This\nis what a sphinx directive looks like using myst markdown formatting:\n\n## Core Functions\n\n### `inspect_df(df)`\n\nInspects a pandas DataFrame and returns a concise overview including:\n\n- Column data types\n- Missing value counts\n- Basic summary statistics\n\n**Example:**\n\n```python\n\nfrom autoeda.inspect import inspect_df\n\ninspect_df(df)\n\nget_unary(df, threshold=0.75, dropna=False)\nIdentifies columns that are dominated by a single value, which may indicate low-information or near-constant features.\n\nthreshold controls how dominant a value must be to flag a column\ndropna controls whether missing values are ignored\n\nExample:\n\nfrom autoeda.inspect import get_unary\n\nget_unary(df)\n\n\nget_high_cardinality(df, max_unique_ratio=0.5)\nIdentifies columns with a high number of unique values relative to the size of the dataset, which may require special encoding or handling.\n\nmax_unique_ratio defines the maximum allowed ratio of unique values\n\nExample:\n\nfrom autoeda.inspect import get_high_cardinality\n\nget_high_cardinality(df)\n\n\nget_summary_df(df)\nGenerates a summary DataFrame that provides an overview of each column, including data types, counts, missing values, and basic descriptive statistics.\nExample:\n\n from autoeda.inspect import get_summary_df\n\nget_summary_df(df)\n\n\ncheck_na_outliers(df, outlier_method=\"auto\")\nChecks each column for missing values and potential outliers, helping identify data quality issues that may require preprocessing.\n\noutlier_method controls how outliers are detected\n\nExample:\n\nfrom autoeda.inspect import check_na_outliers\n\ncheck_na_outliers(df)\n\n\nplot_correlation_heatmap(df, target=None, method=\"pearson\")\nCreates a correlation heatmap for numerical features in the dataset to help identify relationships between variables. If a target variable is provided, correlations with the target are highlighted.\n\ntarget optionally specifies a target column\nmethod controls the correlation metric used\n\nExample:\n\nfrom autoeda.inspect import plot_correlation_heatmap\n\nplot_correlation_heatmap(df)\n\n:maxdepth: 2 :caption: Contents:\n\nIf you see syntax like the syntax below, you are looking at rst."
+    "title": "Welcome to AutoEDA’s Documentation",
+    "section": "",
+    "text": "autoeda currently provides the following functionality:\n\nDataset inspection utilities\nSummary statistics for numerical and categorical variables\nQuick diagnostics for tabular datasets"
+  },
+  {
+    "objectID": "index.html#core-functions",
+    "href": "index.html#core-functions",
+    "title": "Welcome to AutoEDA’s Documentation",
+    "section": "",
+    "text": "Inspects a pandas DataFrame and returns a concise overview including:\n\nColumn data types\nMissing value counts\nBasic summary statistics\n\nExample:\n\nfrom autoeda.inspect import inspect_df\n\ninspect_df(df)\n\n\n\nIdentifies columns that are dominated by a single value, which may indicate low-information or near-constant features.\n\nthreshold controls how dominant a value must be to flag a column\ndropna controls whether missing values are ignored\n\nExample:\n\nfrom autoeda.inspect import get_unary\n\nget_unary(df, threshold=0.70)\n\n\n\nIdentifies columns with a high number of unique values relative to the size of the dataset, which may require special encoding or handling.\n\nmax_unique_ratio defines the maximum allowed ratio of unique values\n\nExample:\n\nfrom autoeda.inspect import get_high_cardinality\n\nget_high_cardinality(df, max_unique_ratio=0.5)\n\n\n\nGenerates a summary DataFrame that provides an overview of each column, including data types, counts, missing values, and basic descriptive statistics.\nExample:\n\n from autoeda.inspect import get_summary_df\n\nget_summary_df(df)\n\n\n\nChecks each column for missing values and potential outliers, helping identify data quality issues that may require preprocessing.\n\noutlier_method controls how outliers are detected\n\nExample:\n\nfrom autoeda.inspect import check_na_outliers\n\nquality_report = check_na_outliers(\n    df,\n    outlier_method=\"auto\",\n    na_threshold=0.1,\n    outlier_threshold=0.05,\n    return_risk=True,\n    return_suggestions=True,\nprint(quality_report)\n)\n\n\n\nCreates a correlation heatmap for numerical features in the dataset to help identify relationships between variables. If a target variable is provided, correlations with the target are highlighted.\n\ntarget optionally specifies a target column\nmethod controls the correlation metric used\n\nExample:\n\nfrom autoeda.inspect import plot_correlation_heatmap\n\nplot_correlation_heatmap(df)"
   },
   {
     "objectID": "index.html#copyright",
     "href": "index.html#copyright",
-    "title": "Welcome to AutoEDA’s Documentation ’",
-    "section": "Copyright",
-    "text": "Copyright\n\nCopyright © 2026 Eli Gonzalez, Gurleen Kaur, Gloria Yi, Mantram Sharma.\nFree software distributed under the MIT License."
+    "title": "Welcome to AutoEDA’s Documentation",
+    "section": "",
+    "text": "Copyright © 2026 Eli Gonzalez, Gurleen Kaur, Gloria Yi, Mantram Sharma.\nFree software distributed under the MIT License."
   },
   {
     "objectID": "DEVELOPMENT.html",
@@ -393,7 +407,7 @@
     "href": "reference/get_summary_df.html",
     "title": "get_summary_df",
     "section": "",
-    "text": "get_summary_df\nFunctions to support automated exploratory data analysis (EDA)\n\n\n\n\n\nName\nDescription\n\n\n\n\nget_summary_df\nReturns a summary dataframe with the main statistics, datatypes,\n\n\n\n\n\nget_summary_df.get_summary_df(df, categorical_columns, numerical_columns)\nReturns a summary dataframe with the main statistics, datatypes, counts/missing values for numerical and categorical columns.\nFor categorical columns, the summary includes: - Data types - Number of non-null values - Count of missing values - Most common value/category\nFor numerical columns, the summary includes: - Data types - Count of non-null values - Count of missing values - Mean - Standard deviation - Minimum value - Maximum value\nParameters: df: Pandas DataFrame. categorical_columns: names of the columns with categorical data. numerical_columns: names of the columns with numerical data.\nReturns: categorical_df: summary dataframe for categorical columns. numerical_df: summary dataframe for numerical columns.",
+    "text": "get_summary_df\n\n\n\n\n\nName\nDescription\n\n\n\n\nget_summary_df\nReturns a summary dataframe with the main statistics, datatypes,\n\n\n\n\n\nget_summary_df.get_summary_df(df, categorical_columns, numerical_columns)\nReturns a summary dataframe with the main statistics, datatypes, counts/missing values for numerical and categorical columns.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\ndf\npandas.DataFrame\nInput dataset for exploratory data analysis.\nrequired\n\n\ncategorical_columns\nlist of str\nNames of columns treated as categorical variables.\nrequired\n\n\nnumerical_columns\nlist of str\nNames of columns treated as numerical variables.\nrequired\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\ncategorical_df\npandas.DataFrame\nSummary dataframe for categorical columns, including: data types, non-null counts, missing values, and most frequent category.\n\n\nnumerical_df\npandas.DataFrame\nSummary dataframe for numerical columns, including: data types, non-null counts, missing values, mean, standard deviation, minimum, and maximum values.",
     "crumbs": [
       "Documentation",
       "Summary statistics",
@@ -405,7 +419,7 @@
     "href": "reference/get_summary_df.html#functions",
     "title": "get_summary_df",
     "section": "",
-    "text": "Name\nDescription\n\n\n\n\nget_summary_df\nReturns a summary dataframe with the main statistics, datatypes,\n\n\n\n\n\nget_summary_df.get_summary_df(df, categorical_columns, numerical_columns)\nReturns a summary dataframe with the main statistics, datatypes, counts/missing values for numerical and categorical columns.\nFor categorical columns, the summary includes: - Data types - Number of non-null values - Count of missing values - Most common value/category\nFor numerical columns, the summary includes: - Data types - Count of non-null values - Count of missing values - Mean - Standard deviation - Minimum value - Maximum value\nParameters: df: Pandas DataFrame. categorical_columns: names of the columns with categorical data. numerical_columns: names of the columns with numerical data.\nReturns: categorical_df: summary dataframe for categorical columns. numerical_df: summary dataframe for numerical columns.",
+    "text": "Name\nDescription\n\n\n\n\nget_summary_df\nReturns a summary dataframe with the main statistics, datatypes,\n\n\n\n\n\nget_summary_df.get_summary_df(df, categorical_columns, numerical_columns)\nReturns a summary dataframe with the main statistics, datatypes, counts/missing values for numerical and categorical columns.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\ndf\npandas.DataFrame\nInput dataset for exploratory data analysis.\nrequired\n\n\ncategorical_columns\nlist of str\nNames of columns treated as categorical variables.\nrequired\n\n\nnumerical_columns\nlist of str\nNames of columns treated as numerical variables.\nrequired\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\ncategorical_df\npandas.DataFrame\nSummary dataframe for categorical columns, including: data types, non-null counts, missing values, and most frequent category.\n\n\nnumerical_df\npandas.DataFrame\nSummary dataframe for numerical columns, including: data types, non-null counts, missing values, mean, standard deviation, minimum, and maximum values.",
     "crumbs": [
       "Documentation",
       "Summary statistics",
