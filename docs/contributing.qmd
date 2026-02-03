@@ -1,0 +1,13 @@
+# Contributing
+
+We welcome contributions to **AutoEDA**, including bug reports, feature requests, documentation improvements, and code contributions.
+
+## How to Contribute
+
+-   Open an issue to report bugs or suggest features
+-   Fork the repository and create a feature branch
+-   Submit a pull request with a clear description
+
+For full contribution guidelines, see:
+
+<https://github.com/UBC-MDS/autoeda/blob/develop/CONTRIBUTING.md>
