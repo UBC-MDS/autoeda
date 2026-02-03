@@ -120,10 +120,9 @@ statistics.
 get_summary_df(df, categorical_columns, numerical_columns)
 ```
 
-### `check_na_outlier.check_na_outliers(
+### `check_na_outliers(
     df,
     outlier_method='auto',
-    na_threshold=0.1，
     ...
 )`
 
@@ -144,9 +143,9 @@ quality_report = check_na_outliers(
     na_threshold=0.1,
     outlier_threshold=0.05,
     return_risk=True,
-    return_suggestions=True,
-print(quality_report)
+    return_suggestions=True
 )
+print(quality_report)
 ```
 
 ### `plot_correlation_heatmap(df, target=None, method="pearson")`
