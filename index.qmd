@@ -100,7 +100,7 @@ from autoeda.inspect import get_high_cardinality
 get_high_cardinality(df)
 ```
 
-### `get_summary_df(df)`
+### `get_summary_df(df, categorical_columns, numerical_columns)`
 
 Generates a summary DataFrame that provides an overview of each column,
 including data types, counts, missing values, and basic descriptive
@@ -112,7 +112,7 @@ statistics.
 
  from autoeda.inspect import get_summary_df
 
-get_summary_df(df)
+get_summary_df(df, categorical_columns, numerical_columns)
 ```
 
 ### `check_na_outliers(df, outlier_method="auto")`
