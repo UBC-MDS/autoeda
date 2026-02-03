@@ -1,0 +1,24 @@
+# License
+
+AutoEDA is released under the **MIT License**.
+
+## Why MIT?
+
+We chose the MIT License because:
+
+-   It is permissive and allows reuse in academic, open-source, and commercial projects
+-   It aligns well with the Python open-source ecosystem
+-   It minimizes legal friction for contributors and users
+-   It supports the collaborative goals of DSCI 524
+
+## Full License Text
+
+The full legal license text is available in the repository:
+
+[https://github.com/UBC-MDS/autoeda/blob/main/LICENSE](https://github.com/UBC-MDS/autoeda/blob/develop/LICENSE)
+
+## License Discussion
+
+Our team documented and discussed the license choice to ensure transparency.
+
+<https://github.com/UBC-MDS/autoeda/issues/56#issue-3889099667>
