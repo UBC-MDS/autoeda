@@ -4,7 +4,7 @@
 |----|----|
 | Package | [![Latest PyPI Version](https://img.shields.io/pypi/v/autoeda.svg)](https://pypi.org/project/autoeda/) [![Supported Python Versions](https://img.shields.io/pypi/pyversions/autoeda.svg)](https://pypi.org/project/autoeda/) |
 | Meta | [![Code of Conduct](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](CODE_OF_CONDUCT.md) |
-[![Netlify Status](https://api.netlify.com/api/v1/badges/8d483306-df77-41fd-8e9a-ad3bc57b1c4c/deploy-status)](https://app.netlify.com/projects/autoeda/deploys)
+| |[![Netlify Status](https://api.netlify.com/api/v1/badges/8d483306-df77-41fd-8e9a-ad3bc57b1c4c/deploy-status)](https://app.netlify.com/projects/autoeda/deploys)
 
 *TODO: the above badges that indicate python version and package version will only work if your package is on PyPI. If you don't plan to publish to PyPI, you can remove them.*
 
