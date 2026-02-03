@@ -33,8 +33,7 @@ jobs:
           quartodoc build
 
       - name: Render Quarto Project
-        run: | 
-          quarto render
+        uses: quarto-dev/quarto-actions/render@v2
 
       # =====================================================
       # Deploy to Netlify
