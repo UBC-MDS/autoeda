@@ -53,7 +53,7 @@ jobs:
         with:
           step: start
           token: ${{ secrets.GITHUB_TOKEN }}
-          env: github-pages
+          env: ${{ env.RELEASE_NAME }}
           logs: 'https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}'
 
       # Deploy the rendered site to Netlify with a PR-specific preview URL
@@ -79,6 +79,6 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           status: ${{ job.status }}
           deployment_id: ${{ steps.deployment.outputs.deployment_id }}
-          env: github-pages
+          env: ${{ steps.deployment.outputs.env }}
           env_url: ${{ steps.netlify.outputs.url }}
           logs: 'https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}'
