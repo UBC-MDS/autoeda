@@ -17,11 +17,18 @@ jobs:
         with:
             python-version: ${{ matrix.python-version }}
 
-      - name: Install hatch
-        run: |
-            python -m pip install --upgrade pip
-            python -m pip install hatch
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
 
-      - name: Build documentation using Hatch
+      - name: Install dependencies
         run: |
-            hatch run docs:build
+          python -m pip install --upgrade pip
+          pip install -e .[docs]
+          pip install quartodoc
+
+      - name: Build docs with quartodoc + quarto
+        run: |
+          quartodoc build
+          quarto render
+
+      
