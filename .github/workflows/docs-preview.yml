@@ -43,7 +43,7 @@ jobs:
       # Create a unique name for this deployment using the PR number
       # This helps track which PR preview is which
       - name: Configure release name
-        run: echo "RELEASE_NAME=pr-${{ github.event.pull_request.number || github.run_id }}" >> $GITHUB_ENV
+        run: echo "RELEASE_NAME=pr-${{ github.event.number }}" >> $GITHUB_ENV
 
       # Create a deployment status on GitHub to track the deployment progress
       # This shows up in the PR's "Deployments" section
@@ -66,10 +66,8 @@ jobs:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
         run: |
           npm install -g netlify-cli
-          ALIAS="pr-${{ github.event.pull_request.number || github.run_id }}"
-          netlify deploy --dir=_site --alias="$ALIAS" --json > deploy.json
-          DEPLOY_URL=$(python -c "import json; d=json.load(open('deploy.json')); \
-          print(d.get('deploy_ssl_url') or d.get('deploy_url') or '')")
+          netlify deploy --dir=_site/ --alias="pr-${{ github.event.number }}" 2>&1 | tee deploy.log
+          DEPLOY_URL=$(grep -oP 'https://[^\s]+' deploy.log | grep -E '(netlify\.app|--.*\.netlify\.app)' | head -n 1)
           echo "url=${DEPLOY_URL}" >> $GITHUB_OUTPUT
           
       # Update the GitHub deployment status with success/failure and the preview URL
