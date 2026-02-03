@@ -1,7 +1,3 @@
-"""
-Functions to support automated exploratory data analysis (EDA)
-"""
-
 import matplotlib.pyplot as plt
 import seaborn as sns
 

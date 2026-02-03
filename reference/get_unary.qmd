@@ -8,14 +8,16 @@ Returns a list of columns with a single value with a relative
 frequency percentage over a threshold (75% as default).
 In case user want only unary columns then threshold should be set to 1.
 
-## Parameters: {.doc-section .doc-section-parameters}
+## Parameters {.doc-section .doc-section-parameters}
 
-df: pandas dataframe to analyze.
-threshold: If the relative frequency of the value with the highest counting
-is over this threshold then column is selected. Default is 0.75.
-dropna: If considering or not null values as a value in frequencies.
-Default is False.
+| Name      | Type             | Description                                                                                                                         | Default    |
+|-----------|------------------|-------------------------------------------------------------------------------------------------------------------------------------|------------|
+| df        | pandas.DataFrame | Input DataFrame to analyze.                                                                                                         | _required_ |
+| threshold | float            | Proportion threshold above which a column is considered unary. If set to 1.0, only columns with a single unique value are returned. | `0.75`     |
+| dropna    | bool             | Whether to exclude missing values (NaN) when computing value frequencies.                                                           | `False`    |
 
-## Returns: {.doc-section .doc-section-returns}
+## Returns {.doc-section .doc-section-returns}
 
-unary_cols: list of unary columns.
+| Name       | Type        | Description                               |
+|------------|-------------|-------------------------------------------|
+| unary_cols | list of str | List of column names identified as unary. |

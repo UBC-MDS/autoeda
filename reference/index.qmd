@@ -6,7 +6,7 @@ Functions to perform automated exploratory data analysis.
 
 | | |
 | --- | --- |
-| [get_summary_df](get_summary_df.qmd#autoeda.get_summary_df) | Functions to support automated exploratory data analysis (EDA) |
+| [get_summary_df](get_summary_df.qmd#autoeda.get_summary_df) |  |
 
 ## Data inspection
 

@@ -160,18 +160,63 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="contributing" class="level1">
-<h1>Contributing</h1>
-<p>We welcome contributions to <strong>AutoEDA</strong>, including bug reports, feature requests, documentation improvements, and code contributions.</p>
-<section id="how-to-contribute" class="level2">
-<h2 class="anchored" data-anchor-id="how-to-contribute">How to Contribute</h2>
-<ul>
-<li>Open an issue to report bugs or suggest features</li>
-<li>Fork the repository and create a feature branch</li>
-<li>Submit a pull request with a clear description</li>
-</ul>
-<p>For full contribution guidelines, see:</p>
-<p><a href="https://github.com/UBC-MDS/autoeda/blob/develop/CONTRIBUTING.md" class="uri">https://github.com/UBC-MDS/autoeda/blob/develop/CONTRIBUTING.md</a></p>
+<section id="function-reference" class="level1 doc doc-index">
+<h1 class="doc doc-index">Function reference</h1>
+<section id="summary-statistics" class="level2">
+<h2 class="anchored" data-anchor-id="summary-statistics">Summary statistics</h2>
+<p>Functions to perform automated exploratory data analysis.</p>
+<table class="caption-top table">
+<tbody>
+<tr class="odd">
+<td><a href="../reference/get_summary_df.html#autoeda.get_summary_df">get_summary_df</a></td>
+<td>Functions to support automated exploratory data analysis (EDA)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="data-inspection" class="level2">
+<h2 class="anchored" data-anchor-id="data-inspection">Data inspection</h2>
+<p>Functions to inspect data for common issues.</p>
+<table class="caption-top table">
+<tbody>
+<tr class="odd">
+<td><a href="../reference/get_unary.html#autoeda.inspect.get_unary">get_unary</a></td>
+<td>Returns a list of columns with a single value with a relative</td>
+</tr>
+<tr class="even">
+<td><a href="../reference/get_high_cardinality.html#autoeda.inspect.get_high_cardinality">get_high_cardinality</a></td>
+<td>Identify columns with high cardinality.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="missing-data-and-outliers" class="level2">
+<h2 class="anchored" data-anchor-id="missing-data-and-outliers">Missing data and outliers</h2>
+<p>Function to check amount of missing data in a DataFrame.</p>
+<table class="caption-top table">
+<tbody>
+<tr class="odd">
+<td><a href="../reference/check_na_outliers.html#autoeda.check_na_outlier.check_na_outliers">check_na_outliers</a></td>
+<td>Diagnose missing values and outliers in a DataFrame.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="data-plotting" class="level2">
+<h2 class="anchored" data-anchor-id="data-plotting">Data plotting</h2>
+<p>Functions to create common plots for exploratory data analysis.</p>
+<table class="caption-top table">
+<tbody>
+<tr class="odd">
+<td><a href="../reference/plot_correlation_heatmap.html#autoeda.plot.plot_correlation_heatmap">plot_correlation_heatmap</a></td>
+<td>Generate a correlation heatmap for numeric features in a dataset.</td>
+</tr>
+<tr class="even">
+<td><a href="../reference/plot_histograms_by_target.html#autoeda.plot.plot_histograms_by_target">plot_histograms_by_target</a></td>
+<td>Plot histograms of features grouped by a target variable.</td>
+</tr>
+</tbody>
+</table>
 
 
 </section>
