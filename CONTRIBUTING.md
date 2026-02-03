@@ -173,4 +173,4 @@ We truly appreciate your time and effort in supporting this project.
 
 *This document was inspired by the [Altair
 CONTRIBUTING.md](https://github.com/vega/altair/blob/main/CONTRIBUTING.md)
-and adapted for the Sepsis Survival Prediction Project.*
+and adapted for the autoeda project*
